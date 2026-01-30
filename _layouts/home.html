@@ -19,7 +19,7 @@
                 <section class="sidebar-section">
                     <h2>About</h2>
                     <p>
-                        Based in Oroville/Chico, CA with 13+ years of UX/UI design, and junior front-end development.
+                        Based in Oroville/Chico, CA with 13+ years of UX/UI design experience, and front-end development.
                     </p>
                 </section>
                 
@@ -36,23 +36,60 @@
                 
                 <section class="sidebar-section">
                     <h2>Skills</h2>
-                    <div class="skills-list">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">Design Systems</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">UX/UI Design</span>
-                        <span class="skill-tag">Wireframing</span>
-                        <span class="skill-tag">Prototyping</span>
-                        <span class="skill-tag">Responsive Design</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Agile</span>
-                        <span class="skill-tag">User Research</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Adobe Creative Cloud</span>
-                    </div>
+                    
+                    {% if site.skills.languages %}
+                        <h3 class="skill-category">Languages</h3>
+                        <div class="skills-list">
+                                {% for language in site.skills.languages %}
+                                    <span class="skill-tag">{{ language }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
+                    
+                    {% if site.skills.frameworks %}
+                        <h3 class="skill-category">Frameworks</h3>
+                        <div class="skills-list">
+                                {% for framework in site.skills.frameworks %}
+                                    <span class="skill-tag">{{ framework }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
+
+                    {% if site.skills.tools %}
+                        <h3 class="skill-category">Tools</h3>
+                        <div class="skills-list">
+                                {% for tool in site.skills.tools %}
+                                    <span class="skill-tag">{{ tool }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
+
+                    {% if site.skills.editors %}
+                        <h3 class="skill-category">Editors</h3>
+                        <div class="skills-list">
+                                {% for editor in site.skills.editors %}
+                                    <span class="skill-tag">{{ editor }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
+
+                    {% if site.skills.software %}
+                        <h3 class="skill-category">Software</h3>
+                        <div class="skills-list">
+                                {% for software in site.skills.software %}
+                                    <span class="skill-tag">{{ software }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
+
+                    {% if site.skills.soft_skills %}
+                        <h3 class="skill-category">Soft Skills</h3>
+                        <div class="skills-list">
+                                {% for soft_skill in site.skills.soft_skills %}
+                                    <span class="skill-tag">{{ soft_skill }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
                 </section>
             </div>
         </aside>
