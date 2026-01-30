@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="home-layout">
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="avatar">
+                    <img src="https://placehold.co/600x400.png" alt="Profile Picture">
+                </div>
+                
+                <h1 class="profile-name">John Hirleman</h1>
+                
+                <section class="sidebar-section">
+                    <h2>About</h2>
+                    <p>
+                        Based in Oroville/Chico, CA with 13+ years of UX/UI design, and junior front-end development.
+                    </p>
+                </section>
+                
+                <section class="sidebar-section">
+                    <h2>Contact</h2>
+                    <ul class="contact-list">
+                        <li><a href="mailto:johnhirleman@gmail.com">johnhirleman@gmail.com</a></li>
+                        <li>(555) 555-5555</li>
+                        <li>Oroville, CA</li>
+                        <li><a href="https://linkedin.com/in/johnhirleman" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/johnhirleman" target="_blank">GitHub</a></li>
+                    </ul>
+                </section>
+                
+                <section class="sidebar-section">
+                    <h2>Skills</h2>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Design Systems</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">UX/UI Design</span>
+                        <span class="skill-tag">Wireframing</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">User Research</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe Creative Cloud</span>
+                    </div>
+                </section>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            {{ content }}
+        </main>
+    </div>
+</body>
+</html>
