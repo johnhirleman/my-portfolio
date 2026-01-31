@@ -11,6 +11,12 @@ github_username:  johnhirleman
 plugins:
   - jekyll-feed
 
+# Collections for projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+
 #sass
 sass:
   sass_dir: _sass
@@ -22,6 +28,7 @@ skills:
     - HTML
     - CSS
     - JavaScript
+    - Liquid
   frameworks:
     - Node.js
     - React
