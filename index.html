@@ -13,31 +13,35 @@ title: Home
 <section class="projects-section">
     <h2>Featured Projects</h2>
     <div class="projects-scroll">
-        <div class="project-item">
-            <img src="https://placehold.co/600x400.png" alt="Project 1">
-            <h3>Project Name 1</h3>
-            <p>Brief project description</p>
-        </div>
-        <div class="project-item">
-            <img src="https://placehold.co/600x400.png" alt="Project 2">
-            <h3>Project Name 2</h3>
-            <p>Brief project description</p>
-        </div>
-        <div class="project-item">
-            <img src="https://placehold.co/600x400.png" alt="Project 3">
-            <h3>Project Name 3</h3>
-            <p>Brief project description</p>
-        </div>
-        <div class="project-item">
-            <img src="https://placehold.co/600x400.png" alt="Project 4">
-            <h3>Project Name 4</h3>
-            <p>Brief project description</p>
-        </div>
-        <div class="project-item">
-            <img src="https://placehold.co/600x400.png" alt="Project 5">
-            <h3>Project Name 5</h3>
-            <p>Brief project description</p>
-        </div>
+        {% for project in site.projects limit:5 %}
+            <a href="{{ project.url | relative_url }}" class="project-item">
+                {% if project.image %}
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+                {% else %}
+                <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
+                {% endif %}
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.excerpt | strip_html | truncate: 100 }}</p>
+            </a>
+        {% endfor %}
+
+        {% if site.projects.size == 0 %}
+            <div class="project-item">
+                <img src="https://placehold.co/600x400.png" alt="Project 1">
+                <h3>Project Name 1</h3>
+                <p>Brief project description</p>
+            </div>
+            <div class="project-item">
+                <img src="https://placehold.co/600x400.png" alt="Project 2">
+                <h3>Project Name 2</h3>
+                <p>Brief project description</p>
+            </div>
+            <div class="project-item">
+                <img src="https://placehold.co/600x400.png" alt="Project 3">
+                <h3>Project Name 3</h3>
+                <p>Brief project description</p>
+            </div>
+        {% endif %}
     </div>
 </section>
 

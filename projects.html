@@ -8,88 +8,34 @@ title: Projects
     <p>Here are some of my featured projects that showcase my skills and experience.</p>
     
     <div class="projects-grid">
-        <div class="project-card">
-            <h3>Project Name 1</h3>
-            <p>
-                Brief description of what this project does and its impact. Explain the problem 
-                it solves and why it matters.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">MongoDB</span>
+        {% for project in site.projects %}
+            <a href="{{ project.url | relative_url }}" class="project-item">
+                {% if project.image %}
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+                {% else %}
+                <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
+                {% endif %}
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.excerpt | strip_html | truncate: 100 }}</p>
+            </a>
+        {% endfor %}
+
+        {% if site.projects.size == 0 %}
+            <div class="project-item">
+                <img src="https://placehold.co/600x400.png" alt="Project 1">
+                <h3>Project Name 1</h3>
+                <p>Brief project description</p>
             </div>
-            <p><a href="#" target="_blank">View Project →</a></p>
-        </div>
-        
-        <div class="project-card">
-            <h3>Project Name 2</h3>
-            <p>
-                Brief description of what this project does and its impact. Highlight key features 
-                and your role in the project.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">Python</span>
-                <span class="tag">Django</span>
-                <span class="tag">PostgreSQL</span>
+            <div class="project-item">
+                <img src="https://placehold.co/600x400.png" alt="Project 2">
+                <h3>Project Name 2</h3>
+                <p>Brief project description</p>
             </div>
-            <p><a href="#" target="_blank">View Project →</a></p>
-        </div>
-        
-        <div class="project-card">
-            <h3>Project Name 3</h3>
-            <p>
-                Brief description of what this project does and its impact. Mention any challenges 
-                you overcame or interesting solutions you implemented.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">Vue.js</span>
-                <span class="tag">Firebase</span>
-                <span class="tag">Tailwind</span>
+            <div class="project-item">
+                <img src="https://placehold.co/600x400.png" alt="Project 3">
+                <h3>Project Name 3</h3>
+                <p>Brief project description</p>
             </div>
-            <p><a href="#" target="_blank">View Project →</a></p>
-        </div>
-        
-        <div class="project-card">
-            <h3>Project Name 4</h3>
-            <p>
-                Brief description of what this project does and its impact. Share metrics or 
-                results if available.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">TypeScript</span>
-                <span class="tag">Express</span>
-                <span class="tag">Docker</span>
-            </div>
-            <p><a href="#" target="_blank">View Project →</a></p>
-        </div>
-        
-        <div class="project-card">
-            <h3>Project Name 5</h3>
-            <p>
-                Brief description of what this project does and its impact. Include what you 
-                learned from building this project.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">Go</span>
-                <span class="tag">Redis</span>
-                <span class="tag">AWS</span>
-            </div>
-            <p><a href="#" target="_blank">View Project →</a></p>
-        </div>
-        
-        <div class="project-card">
-            <h3>Project Name 6</h3>
-            <p>
-                Brief description of what this project does and its impact. Mention collaboration 
-                or open source contributions if relevant.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">Swift</span>
-                <span class="tag">iOS</span>
-                <span class="tag">Core Data</span>
-            </div>
-            <p><a href="#" target="_blank">View Project →</a></p>
-        </div>
+        {% endif %}
     </div>
 </article>
