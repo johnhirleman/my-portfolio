@@ -32,7 +32,8 @@ body {
     
     .sidebar {
         width: $sidebar-width;
-        background-color: $primary-color;
+        //background-color: $primary-color;
+        background: linear-gradient(to right, $primary-color, color.adjust($primary-color, $lightness: -10%,), $primary-color);
         color: $white;
         position: fixed;
         height: 100vh;
@@ -66,8 +67,11 @@ body {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 5px solid $accent-color;
+            border: .5rem solid $accent-color;
             object-fit: cover;
+            object-position: top -2.5rem left 0;
+            transform: scaleX(-1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.33);
         }
     }
     

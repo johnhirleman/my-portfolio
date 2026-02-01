@@ -11,7 +11,7 @@
         <aside class="sidebar">
             <div class="sidebar-content">
                 <div class="avatar">
-                    <img src="https://placehold.co/600x400.png" alt="Profile Picture">
+                    <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
                 </div>
                 
                 <h1 class="profile-name">John Hirleman</h1>
@@ -26,16 +26,25 @@
                 <section class="sidebar-section">
                     <h2>Contact</h2>
                     <ul class="contact-list">
-                        <li><a href="mailto:johnhirleman@gmail.com">johnhirleman@gmail.com</a></li>
-                        <li>(555) 555-5555</li>
-                        <li>Oroville, CA</li>
-                        <li><a href="https://linkedin.com/in/johnhirleman" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/johnhirleman" target="_blank">GitHub</a></li>
+                        <li><i class="far fa-envelope"></i> <a href="mailto:johnhirleman@gmail.com">johnhirleman@gmail.com</a></li>
+                        <li><i class="fas fa-mobile-screen"></i> (555) 555-5555</li>
+                        <li><i class="fas fa-map-pin"></i> Oroville, CA</li>
+                        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/johnhirleman" target="_blank">LinkedIn</a></li>
+                        <li><i class="fab fa-github"></i> <a href="https://github.com/johnhirleman" target="_blank">GitHub</a></li>
                     </ul>
                 </section>
                 
                 <section class="sidebar-section">
                     <h2>Skills</h2>
+
+                    {% if site.skills.applied_skills %}
+                        <h3 class="skill-category">Applied Skills</h3>
+                        <div class="skills-list">
+                                {% for applied_skill in site.skills.applied_skills %}
+                                    <span class="skill-tag">{{ applied_skill }}</span>
+                                {% endfor %}
+                            </div>
+                    {% endif %}
                     
                     {% if site.skills.languages %}
                         <h3 class="skill-category">Languages</h3>
@@ -78,15 +87,6 @@
                         <div class="skills-list">
                                 {% for software in site.skills.software %}
                                     <span class="skill-tag">{{ software }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-
-                    {% if site.skills.soft_skills %}
-                        <h3 class="skill-category">Soft Skills</h3>
-                        <div class="skills-list">
-                                {% for soft_skill in site.skills.soft_skills %}
-                                    <span class="skill-tag">{{ soft_skill }}</span>
                                 {% endfor %}
                             </div>
                     {% endif %}
