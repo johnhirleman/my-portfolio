@@ -1,0 +1,62 @@
+// Responsive
+@media (max-width: 1024px) {
+    .home-layout {
+        .sidebar {
+            width: 300px;
+        }
+        
+        .main-content {
+            margin-left: 300px;
+            width: calc(100% - 300px);
+            padding: 2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-layout {
+        .layout-wrapper {
+            flex-direction: column;
+        }
+        
+        .sidebar {
+            width: 100%;
+            position: static;
+            height: auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main-content {
+            margin-left: 0;
+            width: 100%;
+            padding: 2rem 1.5rem;
+        }
+        
+        .avatar img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .profile-name {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .project-item {
+        flex: 0 0 300px;
+    }
+    
+    .experience-meta {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

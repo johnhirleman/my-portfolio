@@ -1,0 +1,108 @@
+// Default layout styles (for other pages)
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Main content (for default layout)
+main {
+    min-height: calc(100vh - 200px);
+    padding: 3rem 0;
+}
+
+article {
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+h1 {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: $primary-color;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: $accent-color;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+a {
+    color: $accent-color;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+// Navigation
+.navbar {
+    background-color: $primary-color;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: $white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+// Footer
+footer {
+    background-color: $primary-color;
+    color: $white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
