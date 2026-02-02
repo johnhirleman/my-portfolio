@@ -14,15 +14,17 @@ title: Home
     <h2>Featured Projects</h2>
     <div class="projects-scroll">
         {% for project in site.projects limit:5 %}
-            <a href="{{ project.url | relative_url }}" class="project-item">
-                {% if project.image %}
-                <img src="{{ project.image }}" alt="{{ project.title }}">
-                {% else %}
-                <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
-                {% endif %}
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.excerpt | strip_html | truncate: 100 }}</p>
-            </a>
+            {% unless project.hidden %}
+                <a href="{{ project.url | relative_url }}" class="project-item">
+                    {% if project.image %}
+                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                    {% else %}
+                    <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
+                    {% endif %}
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.excerpt | strip_html | truncate: 100 | remove: "Overview" }}</p>
+                </a>
+            {% endunless %}
         {% endfor %}
 
         {% if site.projects.size == 0 %}
@@ -47,57 +49,76 @@ title: Home
 
 <section class="experience-section">
     <h2>Experience</h2>
+
+    <div class="experience-card">
+        <h3>Senior UX/UI Designer, Front-end Developer</h3>
+        <div class="experience-meta">
+            <span class="date-range">Sep 2025 - Present</span>
+            <span class="employer">Rental Reactor</span>
+            <span class="location"><i class="fas fa-location-dot"></i> Oroville, CA (Remote)</span>
+        </div>
+        <p>
+            Principal UX/UI Product designer for SaaS rental management platform.  Leading design system creation and implementation to ensure consistency across web and mobile applications.  Collaborating with cross-functional teams to deliver user-centered designs that enhance user experience and drive business growth.
+        </p>
+    </div>
     
     <div class="experience-card">
-        <h3>UX/UI Designer</h3>
+        <h3>Front-end UX/UI Designer, Product Design</h3>
         <div class="experience-meta">
             <span class="date-range">Apr 2019 - Jun 2025</span>
             <span class="employer">Work Truck Solutions</span>
             <span class="location"><i class="fas fa-location-dot"></i> Chico, CA (Remote)</span>
         </div>
         <p>
-            Led development of core platform features, mentored junior developers, and architected 
-            scalable solutions serving millions of users. Improved system performance by 40% through 
-            optimization initiatives.
+            Principal UX/UI Product designer for various B2B and B2C products including internal tools, CRM, and national marketplace Comvoy.  Established design systems and patterns for multiple products to ensure consistency across platforms and streamline development processes.  Collaborated closely with product managers, developers, and stakeholders to deliver user-centered designs that meet business goals.
         </p>
     </div>
     
     <div class="experience-card">
         <h3>UX/UI Designer, Front-End Developer</h3>
         <div class="experience-meta">
-            <span class="date-range">Jun 2020 - Dec 2021</span>
+            <span class="date-range">Mar 2016 - Apr 2019</span>
             <span class="employer">The Distribution Point (Need Direct)</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Remote</span>
+            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
         </div>
         <p>
-            Built full-stack features for SaaS platform, collaborated with product team on feature 
-            planning, and implemented CI/CD pipelines that reduced deployment time by 60%.
+            Product development from conceptualization of new features to optimizing existing features for a frictionless home improvement shopping experience.  Led design and front-end development effort for Shopify migration.
         </p>
     </div>
     
     <div class="experience-card">
-        <h3>UX/UI Designer, Front-End Developer</h3>
+        <h3>Product UX/UI Developer</h3>
         <div class="experience-meta">
-            <span class="date-range">Jan 2018 - May 2020</span>
+            <span class="date-range">May 2015 - Jan 2016</span>
             <span class="employer">Design by Humans</span>
-            <span class="location"><i class="fas fa-location-dot"></i> New York, NY</span>
+            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
         </div>
         <p>
-            Developed client websites and web applications, maintained legacy codebases, and 
-            participated in agile development processes with cross-functional teams.
+            Design, document, implement, and improve product features.  Write semantic HTML/CSS for front-end implementation of custom sites.
         </p>
     </div>
 
     <div class="experience-card">
         <h3>UX/UI Designer, Front-End Developer (E-Commerce)</h3>
         <div class="experience-meta">
-            <span class="date-range">Mar 2012 - Jun 2015</span>
+            <span class="date-range">Mar 2012 - May 2015</span>
             <span class="employer">Build.com (Ferguson Enterprises)</span>
-            <span class="location"><i class="fas fa-location-dot"></i> New York, NY</span>
+            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
         </div>
         <p>
-            Developed client websites and web applications, maintained legacy codebases, and 
-            participated in agile development processes with cross-functional teams.
+            Contributed to front-end design efforts for national home improvement ecommerce marketplace.  Involved in A/B testing, internal and marketplace search enhancement, CMS, CRM, and principal designer for mobile Angular platform.
+        </p>
+    </div>
+
+    <div class="experience-card">
+        <h3>Graphic Design, UX Design Intern</h3>
+        <div class="experience-meta">
+            <span class="date-range">Jun 2008 - Dec 2008</span>
+            <span class="employer">Build.com (Ferguson Enterprises)</span>
+            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+        </div>
+        <p>
+            Designed graphics and layouts for various marketing campaigns, emails, and assisted in UX design projects for national home improvement ecommerce marketplace.
         </p>
     </div>
 </section>
@@ -106,28 +127,26 @@ title: Home
     <h2>Education</h2>
     
     <div class="experience-card">
-        <h3>Bachelor of Science in Computer Science</h3>
+        <h3>Web Design & New Media</h3>
         <div class="experience-meta">
-            <span class="date-range">2014 - 2018</span>
-            <span class="employer">University of Technology</span>
-            <span class="location">Boston, MA</span>
+            <span class="date-range">2009 - 2012</span>
+            <span class="school">Academy of Art University</span>
+            <span class="location"><i class="fas fa-location-dot"></i> San Francisco, CA</span>
         </div>
         <p>
-            Graduated with honors. Focused on software engineering, algorithms, and data structures. 
-            Completed senior capstone project on machine learning applications.
+            Studied web design and new media. Everything from formal graphic design practices to illustration, materials design, branding campaigns, motion graphics, traditional print, web and information design.
         </p>
     </div>
     
     <div class="experience-card">
-        <h3>Relevant Certifications</h3>
+        <h3>Multimedia Studies Program</h3>
         <div class="experience-meta">
-            <span class="date-range">2020 - Present</span>
-            <span class="employer">Various Institutions</span>
-            <span class="location">Online</span>
+            <span class="date-range">2004 - 2007</span>
+            <span class="school">Butte College</span>
+            <span class="location"><i class="fas fa-location-dot"></i> Oroville, CA</span>
         </div>
         <p>
-            AWS Certified Solutions Architect, Google Cloud Professional Developer, 
-            Certified Kubernetes Administrator (CKA).
+            Activities and societies: STAND (Student Training And New Design).  Digital graphic design, web design, photography and illustration.
         </p>
     </div>
 </section>
