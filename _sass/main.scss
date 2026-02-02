@@ -45,7 +45,7 @@ body {
         }
         
         &::-webkit-scrollbar-track {
-            background: color.adjust($primary-color, $lightness: 5%);;
+            background: color.adjust($primary-color, $lightness: 5%);
         }
         
         &::-webkit-scrollbar-thumb {
@@ -428,6 +428,10 @@ body {
             }
             
             &.employer {
+                font-weight: 600;
+            }
+
+            &.school {
                 font-weight: 600;
             }
             
