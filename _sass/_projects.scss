@@ -1,0 +1,14 @@
+@use "sass:color";
+@use 'variables' as *;
+
+//projects page
+#projects {
+    article {
+        background: none;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
