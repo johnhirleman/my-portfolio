@@ -22,7 +22,7 @@ title: Home
                     <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
                     {% endif %}
                     <h3>{{ project.title }}</h3>
-                    <p>{{ project.excerpt | strip_html | truncate: 100 }}</p>
+                    <p>{{ project.excerpt | strip_html | truncate: 100 | remove: "Overview" }}</p>
                 </a>
             {% endunless %}
         {% endfor %}
