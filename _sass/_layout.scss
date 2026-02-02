@@ -1,3 +1,6 @@
+@use "sass:color";
+@use 'variables' as *;
+
 // Default layout styles (for other pages)
 .container {
     max-width: 1200px;

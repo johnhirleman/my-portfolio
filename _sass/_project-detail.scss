@@ -1,3 +1,6 @@
+@use "sass:color";
+@use 'variables' as *;
+
 // Project detail page
 .project-detail {
     max-width: 900px;
