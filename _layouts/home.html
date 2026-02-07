@@ -19,7 +19,10 @@
                 <section class="sidebar-section">
                     <h2>About</h2>
                     <p>
-                        Based in Oroville/Chico, CA with 13+ years of UX/UI design experience, and front-end development.
+                        {% assign start_year = 2012 %}
+                        {% assign current_year = site.time | date: "%Y" %}
+                        {% assign years_experience = current_year | minus: start_year %}
+                        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design experience, and front-end development.
                     </p>
                 </section>
                 

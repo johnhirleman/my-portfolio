@@ -4,9 +4,6 @@ layout: default
 
 <article class="project-detail">
     <header class="project-header">
-        {% if page.image %}
-        <img src="{{ page.image }}" alt="{{ page.title }}" class="project-hero-image">
-        {% endif %}
         
         <h1>{{ page.title }}</h1>
         
@@ -31,6 +28,11 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
+
+        {% if page.images %}
+        <img src="{{ page.images.hero[0] }}" alt="{{ page.title }}" class="project-hero-image">
+        {% endif %}
+
     </header>
     
     <div class="project-content">
