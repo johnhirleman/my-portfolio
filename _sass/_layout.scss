@@ -2,11 +2,11 @@
 @use 'variables' as *;
 
 // Default layout styles (for other pages)
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+// .container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     padding: 0 20px;
+// }
 
 // Main content (for default layout)
 main {
@@ -60,17 +60,59 @@ ul {
 
 // Navigation
 .navbar {
-    background-color: $primary-color;
-    padding: 1rem 0;
+    $padding: .5rem;
+    $border-radius: .5rem;
+
+    background-color: color.adjust($off-white, $alpha: -0.33);
+    backdrop-filter: blur(10px);
+    padding: $padding;
     position: sticky;
-    top: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    top: 2rem;
+    box-shadow: $box-shadow;
+    border-radius: calc($border-radius + $padding);
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
     z-index: 100;
     
     .container {
-        display: flex;
-        justify-content: space-between;
+        display: inline-flex;
+        justify-content: center;
         align-items: center;
+        padding: 0;
+    }
+
+    ul.nav-menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: $padding;
+
+        li {
+            border-color: $white;
+        }
+    }
+
+    .nav-link {
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        transition: border 0.3s ease;
+        padding: .5rem 1rem;
+        border-radius: $border-radius;
+        border: 1px solid color.adjust($white, $lightness: -10%);
+        
+        &:hover {
+            border-bottom: 3px solid $accent-color;
+            color: $accent-color;
+        }
+        
+        &.active {
+            border-bottom: 3px solid $accent-color;
+            color: $accent-color;
+        }
     }
 }
 
@@ -79,22 +121,6 @@ ul {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-    
-    &:hover {
-        color: $accent-color;
-    }
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-link {
-    color: $white;
-    text-decoration: none;
-    transition: color 0.3s ease;
     
     &:hover {
         color: $accent-color;

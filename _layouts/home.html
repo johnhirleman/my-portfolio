@@ -22,7 +22,7 @@
                         {% assign start_year = 2012 %}
                         {% assign current_year = site.time | date: "%Y" %}
                         {% assign years_experience = current_year | minus: start_year %}
-                        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design experience, and front-end development.
+                        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design, and front-end development experience.
                     </p>
                 </section>
                 
@@ -98,6 +98,7 @@
         </aside>
         
         <main class="main-content">
+            {% include navigation.html %}
             {{ content }}
         </main>
     </div>
