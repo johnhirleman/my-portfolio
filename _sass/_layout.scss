@@ -61,7 +61,6 @@ ul {
 //Sidebar
 .sidebar {
     width: $sidebar-width;
-    //background-color: $primary-color;
     background: linear-gradient(to right, $primary-color, color.adjust($primary-color, $lightness: -10%,), $primary-color);
     color: $white;
     position: fixed;
@@ -86,22 +85,78 @@ ul {
 .sidebar-content {
     max-width: 400px;
     margin: 0 auto;
-}
-
-.avatar {
-    text-align: center;
-    margin-bottom: 2rem;
     
-    img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: .5rem solid $accent-color;
-        object-fit: cover;
-        object-position: top -2.5rem left 0;
-        transform: scaleX(-1);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.33);
+    .avatar {
+        text-align: center;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 1rem;
+        
+        img {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            border: .5rem solid $accent-color;
+            object-fit: cover;
+            object-position: top -1.3rem left 0;
+            transform: scaleX(-1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.33);
+        }
+
+        h1.profile-name {
+            margin: 0;
+        }
     }
+
+    .sidebar-quote {
+        position: relative;
+        background-color: $off-white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        font-style: italic;
+        color: $text-color;
+        margin-bottom: 2rem;
+        box-shadow: $box-shadow;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -10px; /* Position the tail at the bottom of the bubble */
+            left: 10%; /* Adjust as needed for horizontal positioning */
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid $off-white; /* Color matches background */
+            border-right: 10px solid transparent; /* Transparent borders create the triangle shape */
+            border-left: 10px solid transparent;
+        }
+
+        p {
+            line-height: 2rem;
+
+            &::before {
+                content: '"';
+                font-size: 2rem;
+                color: $accent-color;
+                vertical-align: bottom;
+                position: relative;
+                top: .05rem;
+                margin-right: .5rem;
+            }
+
+             &::after {
+                content: '"';
+                font-size: 2rem;
+                color: $accent-color;
+                vertical-align: top;
+            }
+        }
+        
+        
+    }
+
+
 }
 
 .profile-name {
@@ -203,13 +258,13 @@ ul {
 
     ul.nav-menu {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         list-style: none;
         margin: 0;
         padding: $padding;
 
         li {
-            border-color: $white;
+            // border-color: $white;
         }
     }
 
