@@ -7,99 +7,99 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body class="home-layout">
-    <div class="layout-wrapper">
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <div class="avatar">
-                    <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
-                    <h1 class="profile-name">John Hirleman</h1>
-                </div>
-                
-                <section class="sidebar-section">
-                    <h2>About</h2>
-                    <p>
-                        {% assign start_year = 2012 %}
-                        {% assign current_year = site.time | date: "%Y" %}
-                        {% assign years_experience = current_year | minus: start_year %}
-                        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design, and front-end development experience.
-                    </p>
-                </section>
-                
-                <section class="sidebar-section">
-                    <h2>Contact</h2>
-                    <ul class="contact-list">
-                        <li><i class="far fa-envelope"></i> <a href="mailto:{{site.email}}">{{site.email}}</a></li>
-                        <li><i class="fas fa-mobile-screen"></i> (555) 555-5555</li>
-                        <li><i class="fas fa-map-pin"></i> Oroville, CA</li>
-                        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">LinkedIn</a></li>
-                        <li><i class="fab fa-github"></i> <a href="https://github.com/{{ site.github }}" target="_blank">GitHub</a></li>
-                    </ul>
-                </section>
-                
-                <section class="sidebar-section">
-                    <h2>Skills</h2>
 
-                    {% if site.skills.applied_skills %}
-                        <h3 class="skill-category">Applied Skills</h3>
-                        <div class="skills-list">
-                                {% for applied_skill in site.skills.applied_skills %}
-                                    <span class="skill-tag">{{ applied_skill }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-                    
-                    {% if site.skills.languages %}
-                        <h3 class="skill-category">Languages</h3>
-                        <div class="skills-list">
-                                {% for language in site.skills.languages %}
-                                    <span class="skill-tag">{{ language }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-                    
-                    {% if site.skills.frameworks %}
-                        <h3 class="skill-category">Frameworks</h3>
-                        <div class="skills-list">
-                                {% for framework in site.skills.frameworks %}
-                                    <span class="skill-tag">{{ framework }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-
-                    {% if site.skills.tools %}
-                        <h3 class="skill-category">Tools</h3>
-                        <div class="skills-list">
-                                {% for tool in site.skills.tools %}
-                                    <span class="skill-tag">{{ tool }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-
-                    {% if site.skills.editors %}
-                        <h3 class="skill-category">Editors</h3>
-                        <div class="skills-list">
-                                {% for editor in site.skills.editors %}
-                                    <span class="skill-tag">{{ editor }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-
-                    {% if site.skills.software %}
-                        <h3 class="skill-category">Software</h3>
-                        <div class="skills-list">
-                                {% for software in site.skills.software %}
-                                    <span class="skill-tag">{{ software }}</span>
-                                {% endfor %}
-                            </div>
-                    {% endif %}
-                </section>
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="avatar">
+                <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+                <h1 class="profile-name">John Hirleman</h1>
             </div>
-        </aside>
-        
-        <main class="main-content">
-            {% include navigation.html %}
-            {{ content }}
-        </main>
-    </div>
+            
+            <section class="sidebar-section">
+                <h2>About</h2>
+                <p>
+                    {% assign start_year = 2012 %}
+                    {% assign current_year = site.time | date: "%Y" %}
+                    {% assign years_experience = current_year | minus: start_year %}
+                    Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design, and front-end development experience.
+                </p>
+            </section>
+            
+            <section class="sidebar-section">
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                    <li><i class="far fa-envelope"></i> <a href="mailto:{{site.email}}">{{site.email}}</a></li>
+                    <li><i class="fas fa-mobile-screen"></i> (555) 555-5555</li>
+                    <li><i class="fas fa-map-pin"></i> Oroville, CA</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">LinkedIn</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/{{ site.github }}" target="_blank">GitHub</a></li>
+                </ul>
+            </section>
+            
+            <section class="sidebar-section">
+                <h2>Skills</h2>
+
+                {% if site.skills.applied_skills %}
+                    <h3 class="skill-category">Applied Skills</h3>
+                    <div class="skills-list">
+                            {% for applied_skill in site.skills.applied_skills %}
+                                <span class="skill-tag">{{ applied_skill }}</span>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+                
+                {% if site.skills.languages %}
+                    <h3 class="skill-category">Languages</h3>
+                    <div class="skills-list">
+                            {% for language in site.skills.languages %}
+                                <span class="skill-tag">{{ language }}</span>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+                
+                {% if site.skills.frameworks %}
+                    <h3 class="skill-category">Frameworks</h3>
+                    <div class="skills-list">
+                            {% for framework in site.skills.frameworks %}
+                                <span class="skill-tag">{{ framework }}</span>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+
+                {% if site.skills.tools %}
+                    <h3 class="skill-category">Tools</h3>
+                    <div class="skills-list">
+                            {% for tool in site.skills.tools %}
+                                <span class="skill-tag">{{ tool }}</span>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+
+                {% if site.skills.editors %}
+                    <h3 class="skill-category">Editors</h3>
+                    <div class="skills-list">
+                            {% for editor in site.skills.editors %}
+                                <span class="skill-tag">{{ editor }}</span>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+
+                {% if site.skills.software %}
+                    <h3 class="skill-category">Software</h3>
+                    <div class="skills-list">
+                            {% for software in site.skills.software %}
+                                <span class="skill-tag">{{ software }}</span>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+            </section>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+        {% include navigation.html %}
+        {{ content }}
+    </main>
+
 </body>
 </html>
