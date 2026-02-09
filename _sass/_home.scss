@@ -1,23 +1,12 @@
 @use "sass:color";
 @use 'variables' as *;
 
-// Home layout with sidebar
-.home-layout {
-   
-}
-
- .layout-wrapper {
-        display: flex;
-        min-height: 100vh;
-}
-
-.main-content {
-    margin-left: $sidebar-width;
-    width: calc(100% - #{$sidebar-width});
-    padding: 3rem 4rem;
-}
-
 // Main content sections
+
+#experience, #education {
+    scroll-margin-top: 4rem;
+}
+
 .intro-section,
 .projects-section,
 .experience-section,
