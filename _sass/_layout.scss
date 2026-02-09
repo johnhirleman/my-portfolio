@@ -107,6 +107,18 @@ ul {
 
         h1.profile-name {
             margin: 0;
+
+            a {
+                color: $white;
+                text-decoration: underline rgba($accent-color, 0);
+                transition: text-decoration-color 0.3s ease;
+
+                &:hover {
+                    text-decoration-color: $accent-color;
+                    text-decoration-color: rgba($accent-color, 1);
+                    
+                }
+            }
         }
     }
 
@@ -197,6 +209,7 @@ ul {
         
         &:hover {
             text-decoration: underline;
+            text-decoration-color: $accent-color;
         }
     }
 }
@@ -269,6 +282,8 @@ ul {
     }
 
     .nav-link {
+        display: inline-block;
+        white-space: nowrap;
         color: $text-color;
         text-decoration: none;
         transition: color 0.3s ease;
