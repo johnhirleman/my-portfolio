@@ -1,0 +1,24 @@
+<div class="sidebar-content">
+    <div class="avatar">
+        <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+        <h1 class="profile-name"><a href="{{ '/' | relative_url }}">John Hirleman</a></h1>
+    </div>
+    
+    {% if page.quote %}
+    <section class="sidebar-quote">
+        <p>{{ page.quote }}</p>
+    </section>
+    {% endif %}
+    
+    {% if page.skills %}
+    <section class="sidebar-section">
+        <h2>Applied Skills</h2>
+        <div class="skills-list">
+            {% for skill in page.skills %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+    
+</div>

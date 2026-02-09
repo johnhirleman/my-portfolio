@@ -1,7 +1,9 @@
-@use "reset";
 @use "base";
-@use "layout";
 @use "home";
-@use "projects";
+@use "layout";
+@use "navigation";
 @use "project-detail";
+@use "projects";
+@use "reset";
 @use "responsive";
+@use "sidebar";

@@ -20,14 +20,6 @@ layout: default
             <a href="{{ page.demo }}" target="_blank" class="project-link">Live Demo →</a>
             {% endif %}
         </div>
-        
-        {% if page.skills %}
-        <div class="skill-stack">
-            {% for skill in page.skills %}
-            <span class="tag">{{ skill }}</span>
-            {% endfor %}
-        </div>
-        {% endif %}
 
         {% if page.images %}
         <img src="{{ page.images.hero[0] }}" alt="{{ page.title }}" class="project-hero-image">

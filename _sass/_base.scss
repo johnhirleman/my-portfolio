@@ -1,0 +1,63 @@
+@use "sass:color";
+@use 'variables' as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $off-white;
+}
+
+// Main content (for default layout)
+main {
+    min-height: calc(100vh - 200px);
+    padding: 3rem 0;
+}
+
+article {
+    background-color: none;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+h1 {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: $primary-color;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: $accent-color;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+a {
+    color: $accent-color;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}

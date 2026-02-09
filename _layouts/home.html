@@ -12,9 +12,8 @@
             <div class="sidebar-content">
                 <div class="avatar">
                     <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+                    <h1 class="profile-name">John Hirleman</h1>
                 </div>
-                
-                <h1 class="profile-name">John Hirleman</h1>
                 
                 <section class="sidebar-section">
                     <h2>About</h2>
@@ -22,7 +21,7 @@
                         {% assign start_year = 2012 %}
                         {% assign current_year = site.time | date: "%Y" %}
                         {% assign years_experience = current_year | minus: start_year %}
-                        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design experience, and front-end development.
+                        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design, and front-end development experience.
                     </p>
                 </section>
                 
@@ -98,6 +97,7 @@
         </aside>
         
         <main class="main-content">
+            {% include navigation.html %}
             {{ content }}
         </main>
     </div>
