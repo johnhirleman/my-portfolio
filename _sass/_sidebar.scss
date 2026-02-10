@@ -36,9 +36,6 @@
         align-items: center;
         gap: 1rem;
 
-        .mobile-menu {
-            visibility: hidden;
-        }
     }
 
     .avatar {
@@ -86,12 +83,12 @@
         &:before {
             content: '';
             position: absolute;
-            top: -10px; /* Position the tail at the bottom of the bubble */
-            left: 10%; /* Adjust as needed for horizontal positioning */
+            top: -10px;
+            left: 10%;
             width: 0;
             height: 0;
-            border-bottom: 10px solid $off-white; /* Color matches background */
-            border-right: 10px solid transparent; /* Transparent borders create the triangle shape */
+            border-bottom: 10px solid $off-white;
+            border-right: 10px solid transparent;
             border-left: 10px solid transparent;
         }
 
@@ -209,28 +206,9 @@
             margin-bottom: 0;
         }
 
-        .mobile-menu {
-            visibility: visible;
-            margin-bottom: 0;
-            margin-right: 0;
-            margin-left: auto;
-            position: static;
-        }
-
     }
 
-    // .sidebar-content.sidebar-header {
-    //     grid-template-columns: auto auto 1fr;
-
-    //     .mobile-menu {
-    //         visibility: visible;
-    //         margin-bottom: 0;
-    //         margin-right: 0;
-    //         margin-left: auto;
-    //         position: static;
-
-    //         @include mixins.navigation($padding, $box-shadow, $border-radius);
-
-    //     }
-    // }
+    .sidebar-content.sidebar-header {
+        grid-template-columns: auto auto 1fr;
+    }
 }

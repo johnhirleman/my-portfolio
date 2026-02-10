@@ -3,7 +3,7 @@
 @use 'mixins';
 
 // Navigation
-.navbar, .mobile-menu {
+.navbar {
 
     @include mixins.navigation($padding, $box-shadow, $border-radius);
     
@@ -60,8 +60,36 @@
     }
 }
 
+.mobile-menu-toggle {
+    @include mixins.navigation($padding, $box-shadow, $border-radius);
+    visibility: hidden;
+}
+
 @media (max-width: 768px) {
-    .navbar {
+
+    .mobile-menu-toggle {
+        visibility: visible;
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-left: auto;
+        position: static;
+
+    }
+
+    //hide desktop navbar
+    .main-content .navbar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+
+        &.nav-open {
+            display: block !important;
+        }
+    }
+
+    .mobile-nav .navbar {
         position: absolute;
         top: 5rem;
         right: 1rem;
