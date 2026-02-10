@@ -52,20 +52,20 @@
             transform: scaleX(-1);
             box-shadow: 0 4px 8px rgba(0,0,0,0.33);
         }
+    }
 
-        h1.profile-name {
-            margin: 0;
+    h1.profile-name {
+        margin: 0;
 
-            a {
-                color: $white;
-                text-decoration: underline rgba($accent-color, 0);
-                transition: text-decoration-color 0.3s ease;
+        a {
+            color: $white;
+            text-decoration: underline rgba($accent-color, 0);
+            transition: text-decoration-color 0.3s ease;
 
-                &:hover {
-                    text-decoration-color: $accent-color;
-                    text-decoration-color: rgba($accent-color, 1);
-                    
-                }
+            &:hover {
+                text-decoration-color: $accent-color;
+                text-decoration-color: rgba($accent-color, 1);
+                
             }
         }
     }

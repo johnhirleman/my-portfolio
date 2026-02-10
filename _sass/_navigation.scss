@@ -62,13 +62,17 @@
 
 .mobile-menu-toggle {
     @include mixins.navigation($padding, $box-shadow, $border-radius);
-    visibility: hidden;
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
 }
 
 @media (max-width: 768px) {
 
     .mobile-menu-toggle {
-        visibility: visible;
+        display: block;
         margin-bottom: 0;
         margin-right: 0;
         margin-left: auto;
@@ -85,7 +89,7 @@
         display: none;
 
         &.nav-open {
-            display: block !important;
+            display: block;
         }
     }
 
