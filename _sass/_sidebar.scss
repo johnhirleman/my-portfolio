@@ -1,5 +1,6 @@
 @use "sass:color";
 @use 'variables' as *;
+@use 'mixins';
 
 //Sidebar
 .sidebar {
@@ -29,13 +30,20 @@
     max-width: 400px;
     margin: 0 auto;
     
+    .sidebar-header {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 1rem;
+
+        .mobile-menu {
+            visibility: hidden;
+        }
+    }
+
     .avatar {
         text-align: center;
         margin-bottom: 2rem;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-        gap: 1rem;
         
         img {
             width: 125px;
@@ -185,4 +193,44 @@
     &.skill-soft {
         background-color: color.adjust($accent-color, $lightness: 10%);
     }
+}
+
+@media (max-width: 768px) {
+
+    .layout-wrapper .sidebar {
+        padding: 1rem;
+    }
+
+    .sidebar-content .sidebar-header {
+        grid-template-columns: auto auto 1fr;
+        margin-bottom: 1rem;
+
+        .avatar, .profile-name {
+            margin-bottom: 0;
+        }
+
+        .mobile-menu {
+            visibility: visible;
+            margin-bottom: 0;
+            margin-right: 0;
+            margin-left: auto;
+            position: static;
+        }
+
+    }
+
+    // .sidebar-content.sidebar-header {
+    //     grid-template-columns: auto auto 1fr;
+
+    //     .mobile-menu {
+    //         visibility: visible;
+    //         margin-bottom: 0;
+    //         margin-right: 0;
+    //         margin-left: auto;
+    //         position: static;
+
+    //         @include mixins.navigation($padding, $box-shadow, $border-radius);
+
+    //     }
+    // }
 }

@@ -1,7 +1,10 @@
 <div class="sidebar-content">
-    <div class="avatar">
-        <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+    <div class="sidebar-header">
+        <div class="avatar">
+            <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+        </div>
         <h1 class="profile-name"><a href="{{ '/' | relative_url }}">John Hirleman</a></h1>
+        <div class="mobile-menu"><i class="fas fa-bars"></i></div>
     </div>
     
     {% if page.quote %}

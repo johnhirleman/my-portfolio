@@ -1,23 +1,11 @@
 @use "sass:color";
 @use 'variables' as *;
+@use 'mixins';
 
 // Navigation
-.navbar {
-    $padding: .5rem;
-    $border-radius: .5rem;
+.navbar, .mobile-menu {
 
-    background-color: color.adjust($off-white, $alpha: -0.33);
-    backdrop-filter: blur(10px);
-    padding: $padding;
-    position: sticky;
-    top: 2rem;
-    box-shadow: $box-shadow;
-    border-radius: calc($border-radius + $padding);
-    width: min-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    z-index: 100;
+    @include mixins.navigation($padding, $box-shadow, $border-radius);
     
     .container {
         display: inline-flex;
@@ -70,4 +58,26 @@
     &:hover {
         color: $accent-color;
     }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+    
+        .container {
+
+            ul.nav-menu {
+                flex-direction: column;
+
+                .nav-link {
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+
 }
