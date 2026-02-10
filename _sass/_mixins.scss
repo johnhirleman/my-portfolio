@@ -1,8 +1,8 @@
 @use "sass:color";
-@use 'variables' as v;
+@use 'variables' as *;
 
 @mixin navigation($padding, $box-shadow, $border-radius) {
-    background-color: color.adjust(v.$off-white, $alpha: -0.33);
+    background-color: color.adjust($off-white, $alpha: -0.33);
     backdrop-filter: blur(10px);
     padding: $padding;
     position: sticky;
@@ -14,4 +14,28 @@
     margin-right: auto;
     margin-bottom: 2rem;
     z-index: 100;
+}
+
+@mixin custom-scrollbar (
+    $thumb-color: $accent-color,
+    $track-color: $light-bg,
+    $width: 8px
+) {
+    &::-webkit-scrollbar {
+        width: $width;
+        height: $width;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $track-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumb-color;
+        border-radius: 4px;
+
+        &:hover {
+            background: color.adjust($thumb-color, $lightness: -10%);
+        }
+    }
 }

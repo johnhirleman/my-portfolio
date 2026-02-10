@@ -1,5 +1,6 @@
 @use "sass:color";
 @use 'variables' as *;
+@use 'mixins';
 
 html {
     scroll-behavior: smooth;
@@ -10,6 +11,8 @@ body {
     line-height: 1.6;
     color: $text-color;
     background-color: $off-white;
+    scrollbar-color: $accent-color $light-bg;
+    @include mixins.custom-scrollbar();
 }
 
 // Main content (for default layout)
