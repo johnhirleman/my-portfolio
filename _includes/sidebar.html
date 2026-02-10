@@ -1,13 +1,49 @@
 <div class="sidebar-content">
-    <div class="avatar">
-        <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+    <div class="sidebar-header">
+        <div class="avatar">
+            <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Profile Picture">
+        </div>
         <h1 class="profile-name"><a href="{{ '/' | relative_url }}">John Hirleman</a></h1>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
     </div>
-    
+
+    <!-- mobile navigation -->
+    <div class="mobile-nav">
+        {% include navigation.html %}
+    </div>
+
     {% if page.quote %}
     <section class="sidebar-quote">
         <p>{{ page.quote }}</p>
     </section>
+    {% endif %}
+
+    {% if page.title contains "Home" %}
+        
+        <section class="sidebar-section">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <li><i class="far fa-envelope"></i> <a href="mailto:{{site.email}}">{{site.email}}</a></li>
+                <li><i class="fas fa-mobile-screen"></i> (555) 555-5555</li>
+                <li><i class="fas fa-map-pin"></i> Oroville, CA</li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">LinkedIn</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/{{ site.github }}" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+
+        {% if site.skills %}
+            <section class="sidebar-section">
+                {% for category in site.skills %}
+                <h3 class="skill-category">{{ category[0] | capitalize }}</h3>
+                <div class="skills-list">
+                    {% for skill in category[1] %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </section>
+        {% endif %}
+
     {% endif %}
     
     {% if page.skills %}

@@ -6,7 +6,10 @@ title: Home
 <section class="intro-section">
     <h2>Introduction</h2>
     <p>
-       Bacon ipsum dolor amet exercitation tenderloin ipsum swine in venison pork culpa do chislic, beef duis reprehenderit. Picanha eiusmod cupidatat in pariatur landjaeger laboris chislic ham. Leberkas capicola id biltong, proident andouille sirloin ad magna commodo. Kielbasa incididunt chuck beef capicola quis. Kielbasa sirloin flank, ribeye doner culpa spare ribs minim frankfurter ut.
+        {% assign start_year = 2012 %}
+        {% assign current_year = site.time | date: "%Y" %}
+        {% assign years_experience = current_year | minus: start_year %}
+        Based in Oroville/Chico, CA with {{ years_experience }} years of UX/UI design, and front-end development experience.
     </p>
 </section>
 
