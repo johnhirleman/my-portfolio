@@ -208,7 +208,13 @@
 
     }
 
-    .sidebar-content.sidebar-header {
-        grid-template-columns: auto auto 1fr;
+    .sidebar-content {
+        max-width: 100%;
+
+        .sidebar-header {
+            grid-template-columns: auto auto 1fr;
+        }
     }
+    
+    
 }

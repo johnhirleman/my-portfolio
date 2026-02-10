@@ -8,7 +8,7 @@
     .layout-wrapper {
 
         .sidebar {
-            width: 300px;
+            width: $sidebar-width;
             padding: 1rem;
             flex-shrink: 0;
             position: static;

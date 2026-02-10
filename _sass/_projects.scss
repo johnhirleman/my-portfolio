@@ -12,3 +12,16 @@
         gap: 2rem;
     }
 }
+
+@media (max-width: 1024px) {
+    #projects {
+        
+        article {
+            padding: 0;
+        }
+        
+        .projects-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
