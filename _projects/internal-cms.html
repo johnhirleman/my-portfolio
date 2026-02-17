@@ -1,0 +1,69 @@
+---
+layout: project
+title: From Hand-Coded Files to a Centralized Page Management System
+date: 2024-12-08
+
+#tech:
+#  - React
+#  - Node.js
+
+quote: "An internal CMS to aid a small team to compose, mantain, and archive complex custom pages."
+
+skills:
+  - Adobe XD
+  - UX/UI Design
+  - User Research/Interviews
+  - Prototyping
+  - Design Systems
+  - Cross Team Collaboration
+
+images:
+  hero:
+    - "https://placehold.co/1200x600.png"
+
+hidden: false
+---
+
+<div class="content-row">
+  <h2>Overview</h2>
+  <div class="content-body">
+    <p>A two-person internal team was hand-coding hundreds of custom marketing pages for commercial vehicle dealerships, uploading HTML files directly to an admin portal table. Pages were created outside of formal development cycles, introducing style conflicts and falling out of sync with platform updates. When global changes were pushed, data attribute references would break across hundreds of pages, requiring manual fixes one by one. With a massive platform update threatening to make every existing page obsolete, the technical debt could no longer be ignored.</p>
+
+    <p>This project was about building internal tooling to solve workflow chaos and technical debt. A centralized page management system with HTML Blocks for reusable components, a token system mapped to global data attributes, and a code editor with integrated lookup tools transformed how the custom pages team worked. The result was faster page creation, centralized maintenance, and a scalable system that finally kept custom pages in sync with the evolving platform.</p>
+  </div>
+</div>
+
+<div class="content-row">
+  <h2>Problem</h2>
+  <div class="content-body">
+    <p>An internal custom pages team of two was hand-coding HTML files and uploading them to an admin portal table to create custom marketing and content pages for hundreds of commercial vehicle dealerships. Pages were created outside of formal development cycles, often introducing style conflicts and custom solutions that fell out of sync with platform standards. When global updates were pushed, data attribute references would break across hundreds of pages requiring manual fixes one by one. There was no centralized archive, no templating system, no quality control, and no source of truth for reusable components. A massive platform update threatening to make every existing custom page obsolete triggered the need for a formal solution.</p>
+  </div>
+</div>
+
+<div class="content-row">
+  <h2>Process</h2>
+  <div class="content-body">
+    <p>Conducted interviews with the custom pages team to understand their workflow and frustrations. Audited the existing token system used for email templates and the team's current page creation process. Identified key priorities: templating, token management, and a centralized archive. Created wireframes and user flows for several scenarios including creating new custom pages, building templates, managing tokens, and connecting to the existing look and feel tool in the admin portal. Developed interactive prototypes in Adobe XD to illustrate user flows. Conducted multiple feedback sessions with the custom pages team to refine designs. Collaborated closely with senior frontend engineering and product management to define MVP scope and technical feasibility. Leveraged the pre-established admin portal design system with new components added for code editors. Designed a migration tool to help bring existing pages into the new system as editable drafts.</p>
+  </div>
+</div>
+
+<div class="content-row">
+  <h2>Solution</h2>
+  <div class="content-body">
+    <p>Centralized custom pages archive organized by dealer, template, and publish status. Custom page editor with separate HTML, CSS, and JS tabs, token lookup via off-canvas panel with typeahead search and click-to-copy functionality. HTML Blocks system providing reusable, centrally maintained components that could be scoped to individual pages and referenced via token syntax. Token management system with globally accessible application tokens, dealer-specific tokens, and custom template tokens. Page configuration fields covering metadata, routing, navigation, review scheduling, and publish status. Live preview in a fully functional dealer site context with draft flag. Automated 30-day review cycle with email notifications to keep custom pages maintained. Migration tool to import existing HTML and CSS as draft pages for manual review and updating. Built as a Svelte single page application leveraging the framework's built-in reactivity, scoped CSS, and performance advantages for a complex multi-panel editing environment.</p>
+  </div>
+</div>
+
+<div class="content-row">
+  <h2>Outcome</h2>
+  <div class="content-body">
+    <p>Rapid adoption by the custom pages team with positive feedback. HTML Blocks system successfully solved the "fix every page manually" problem - global changes to a block automatically propagated across all pages using it, demonstrated clearly when dealers needed updates. Initial learning curve around the blocks editor led to plans for a more transparent block implementation UI. The project validated Svelte as the primary architecture for the admin portal and future B2B and B2C product rollouts. The custom pages system remains in daily use. </p>
+  </div>
+</div>
+
+<div class="content-row">
+  <h2>Personal Learning</h2>
+  <div class="content-body">
+    <p>Complex internal tools require thorough communication, documentation, and implementation strategy. Naming conventions matter enormously when discussing abstract systems like tokens and blocks. Designing internal tools is a preferred discipline due to readily available users for feedback and direct organizational impact.</p>
+  </div>
+</div>
