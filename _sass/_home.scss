@@ -144,3 +144,16 @@
     }
 
 }
+
+@media (max-width: $breakpoint-mobile) {
+
+    .project-item {
+        flex: 0 0 300px;
+    }
+
+    .experience-meta {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+
+}

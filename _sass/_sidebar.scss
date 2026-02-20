@@ -179,10 +179,24 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
 
     .layout-wrapper .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
         padding: 1rem;
+
+        .avatar img {
+            height: 75px;
+            width: 75px;
+            border: .25rem solid $accent-color;
+            object-position: top -1rem left 0;
+        }
+
+        .profile-name {
+            font-size: 1.25rem;
+        }
     }
 
     .sidebar-content .sidebar-header {
@@ -202,6 +216,5 @@
             grid-template-columns: auto auto 1fr;
         }
     }
-    
-    
+
 }

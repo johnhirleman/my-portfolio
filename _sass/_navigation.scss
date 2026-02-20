@@ -69,7 +69,7 @@
     display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
 
     .mobile-menu-toggle {
         display: block;
@@ -97,7 +97,7 @@
         position: absolute;
         top: 5rem;
         right: 1rem;
-    
+
         .container {
 
             ul.nav-menu {
@@ -110,6 +110,15 @@
 
             }
         }
+    }
+
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
     }
 
 }
