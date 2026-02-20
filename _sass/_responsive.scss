@@ -4,7 +4,7 @@
 // Responsive
 
 //Tablet
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
     .layout-wrapper {
         flex-direction: column;
 
@@ -64,7 +64,7 @@
 }
 
 //Mobile
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-mobile) {
 
     //project items
     .project-item {

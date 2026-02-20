@@ -32,6 +32,17 @@
                 color: #7f8c8d;
                 font-size: 1rem;
             }
+
+            .in-progress-badge {
+                background-color: $warning-color;
+                color: $white;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 0.25rem 0.75rem;
+                border-radius: 20px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
             
             .project-link {
                 color: $accent-color;
