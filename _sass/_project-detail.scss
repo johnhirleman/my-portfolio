@@ -33,17 +33,6 @@
                 font-size: 1rem;
             }
 
-            .in-progress-badge {
-                background-color: $warning-color;
-                color: $white;
-                font-size: 0.8rem;
-                font-weight: 600;
-                padding: 0.25rem 0.75rem;
-                border-radius: 20px;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-            }
-            
             .project-link {
                 color: $accent-color;
                 font-weight: 600;
@@ -180,6 +169,23 @@
             }
         }
     }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .content-row {
+        display: block !important;
+    }
+}
+
+.in-progress-badge {
+    background-color: $warning-color;
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 @media (max-width: $breakpoint-tablet) {

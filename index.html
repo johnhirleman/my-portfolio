@@ -16,13 +16,17 @@ title: Home
 <section class="projects-section">
     <h2>Featured Projects</h2>
     <div class="projects-scroll">
-        {% for project in site.projects limit:5 %}
+        {% assign featured_projects = site.projects | where: "featured", true | sort: "featured_order:1" %}
+        {% for project in featured_projects limit:4 %}
             {% unless project.hidden %}
                 <a href="{{ project.url | relative_url }}" class="project-item">
                     {% if project.images.thumb %}
                     <img src="{{ project.images.thumb | relative_url }}" alt="{{ project.title }}">
                     {% else %}
                     <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
+                    {% endif %}
+                    {% if project.in_progress %}
+                    <span class="in-progress-badge">In Progress</span>
                     {% endif %}
                     <h3>{{ project.title }}</h3>
                     <p>{{ project.excerpt | strip_html | truncate: 100 | remove: "Overview" }}</p>
