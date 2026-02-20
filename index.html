@@ -19,8 +19,8 @@ title: Home
         {% for project in site.projects limit:5 %}
             {% unless project.hidden %}
                 <a href="{{ project.url | relative_url }}" class="project-item">
-                    {% if project.image %}
-                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                    {% if project.images.thumb %}
+                    <img src="{{ project.images.thumb | relative_url }}" alt="{{ project.title }}">
                     {% else %}
                     <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
                     {% endif %}

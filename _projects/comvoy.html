@@ -21,8 +21,18 @@ skills:
   - Agile Methodology 
 
 images:
-  hero:
-    - "https://placehold.co/1200x600.png"
+  thumb: assets/images/comvoy/comvoy_project.jpg
+  hero: assets/images/comvoy/comvoy_hero.jpg
+  project:
+    - src: assets/images/comvoy/comvoy_filters_evolution.jpg
+      alt: "Comvoy filters evolution"
+      caption: "The refined evolution of Comvoy filters sidebar."
+    - src: assets/images/comvoy/comvoy_vsp_compare.jpg
+      alt: "Comvoy Vehicle Search Page"
+      caption: "The legacy version of the Comvoy vehicle search page compared to my proposal."
+    - src: assets/images/comvoy/comvoy_vdp_compare.jpg
+      alt: "Comvoy Vehicle Detail Page"
+      caption: "The legacy version of the Comvoy vehicle details page compared to my proposal."
 
 hidden: false
 ---
@@ -30,9 +40,9 @@ hidden: false
 <div class="content-row">
   <h2>Overview</h2>
   <div class="content-body">
-    <p>Comvoy is a national marketplace for commercial work trucks, connecting dealers across the country with individual buyers and fleet managers. As the principal designer from inception in 2019 through 2025, I was responsible for establishing the visual identity, navigation structure, and user experience. The platform launched quickly by leveraging existing architecture from the company's dealer SaaS product, but that speed came with constraints — an exhaustive filter system with poor information hierarchy, cramped layouts, and a color scheme that didn't resonate with the work truck demographic.</p>
+    <p>Over six years as principal designer of a national commercial vehicle marketplace, I navigated the tension between rapid launch constraints and long-term user experience vision. The platform launched quickly by inheriting architecture from existing dealer tools, but that speed came with technical debt — exhaustive filters with poor hierarchy, cramped layouts, and off-brand visual identity. Leadership resistance to change meant every improvement required hard data to justify.</p>
 
-    <p>Over six years, I led incremental, data-driven improvements within those constraints: mobile optimization that improved page load scores by 65%, A/B testing that validated CTA and component changes, and strategic filter reorganization based on Google Analytics usage data. When new product leadership opened the door to comprehensive redesign, I proposed a bold, modern visual direction with a simplified card-based search experience and vehicle-first detail pages. Within five months of my departure, approximately 75% of those recommendations were implemented — validation that the design vision I'd advocated for with data over six years was the right direction all along.</p>
+    <p>Through incremental, validated changes — mobile optimization improving page load scores by 65%, A/B testing that removed friction points, strategic filter reorganization based on usage analytics — I built the case for comprehensive modernization. When new leadership finally opened the door to redesign, I proposed a bold visual direction and simplified user experience. Within five months of my departure, 75% of those recommendations were implemented on the live site, validating the design vision I'd advocated for throughout my tenure.</p>
   </div>
 </div>
 
@@ -48,6 +58,10 @@ hidden: false
   <h2>The Challenge</h2>
   <div class="content-body">
     <p>The inherited architecture presented significant constraints. The VSP featured an exhaustive, poorly organized filter sidebar listing every search category with raw data rather than strategic hierarchy. Vehicle cards displayed in list style with two small images instead of a modern card layout. The VDP used a cramped three-column layout that created visual strain and buried important information. The color scheme (racing orange and teal) felt off-brand for the work truck demographic. Primary CTAs like "I'm interested" tested poorly compared to alternatives. Leadership resistance to change slowed evolution, prioritizing dealer-focused content features (dealership directory, "best in show" galleries) over buyer experience improvements, despite advocacy from both design and product teams.</p>
+
+    <img class="project-image" src="{{ page.images.project[0].src | relative_url }}" alt="{{ page.images.project[0].alt }}">
+    <p class="image-caption">{{ page.images.project[0].caption }}</p>
+
   </div>
 </div>
 
@@ -65,7 +79,13 @@ hidden: false
 
     <p>VSP redesign proposed card-based layout (three per row on desktop) with single large vehicle image, carousel gallery, streamlined attributes, clear pricing, location, and "Check availability" CTA. Filter sidebar simplified through nested categories with overflow scrolling, reducing overall height. Mobile filters showed minimized top-used options with "View all" for refined search.</p>
 
+    <img class="project-image" src="{{ page.images.project[1].src | relative_url }}" alt="{{ page.images.project[1].alt }}">
+    <p class="image-caption">{{ page.images.project[0].caption }}</p>
+
     <p>VDP redesign emphasized vehicle images and attributes in a 2/3 layout with larger image gallery, refined specifications display, and reduced visual strain from the old three-column tables. Pricing, rebates, and lead form occupied the remaining third. <b>This VDP redesign has not yet been fully adopted by the current team.</b></p>
+
+    <img class="project-image" src="{{ page.images.project[2].src | relative_url }}" alt="{{ page.images.project[2].alt }}">
+    <p class="image-caption">{{ page.images.project[0].caption }}</p>
 
     <p>Navigation simplified the mega menu from multiple columns and ads to focused body types, popular brands, and upfit manufacturers.</p>
   </div>
@@ -85,8 +105,6 @@ hidden: false
   </div>
 </div>
 
-<!-- <h2>Key Features</h2>
-<ul>
-  <li>Real-time inventory tracking</li>
-  <li>Secure payment processing</li>
-</ul> -->
+<div class="content-row">
+  <h4 class="center"><a href="mailto:{{ site.email }}">Contact me</a> for more details and work examples.  Available by request.</h4>
+</div>

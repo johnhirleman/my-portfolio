@@ -22,7 +22,7 @@ layout: default
         </div>
 
         {% if page.images %}
-        <img src="{{ page.images.hero[0] }}" alt="{{ page.title }}" class="project-hero-image">
+        <img src="{{ page.images.hero | relative_url }}" alt="{{ page.title }}" class="project-hero-image">
         {% endif %}
 
     </header>
