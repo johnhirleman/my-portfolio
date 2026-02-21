@@ -7,7 +7,8 @@
     width: $sidebar-width;
     background: linear-gradient(to right, $primary-color, color.adjust($primary-color, $lightness: -10%,), $primary-color);
     color: $white;
-    position: fixed;
+    position: sticky;
+    top: 0;
     height: 100vh;
     overflow-y: auto;
     padding: 3rem 2rem;
