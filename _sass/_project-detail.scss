@@ -159,13 +159,20 @@
         border-top: 2px solid $light-bg;
 
         .back-link {
-            color: $accent-color;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            padding-left: .5rem;
 
-            &:hover {
-                color: color.adjust($accent-color, $lightness: 10%);
+            i.fa-arrow-circle-left {
+                position: relative;
+                transform: translateX(0);
+                transition: transform .25s ease-in-out;
+                margin-right: .25rem;
+            }
+
+            &:hover i.fa-arrow-circle-left {
+                transform: translateX(-.25rem);
             }
         }
     }
