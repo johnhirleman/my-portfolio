@@ -21,13 +21,24 @@ skills:
   - Cross Team Collaboration
 
 images:
-  hero: "https://placehold.co/1200x600.png"
+  thumb: assets/images/mobile-crm/mobile-crm_project.jpg
+  hero: assets/images/mobile-crm/mobile-crm_hero.jpg
+  project:
+    - src: assets/images/mobile-crm/mobile-crm_my_buyers_compare.jpg
+      alt: "CRM from complicated tables to simple mobile experience."
+      caption: "Taking large data tables down to a mobile canvas."
+    - src: assets/images/mobile-crm/mobile-crm_mobile_hero.jpg
+      alt: "CRM mobile redesign for buyer info"
+      caption: "The redesigned mobile experience converted complex tables to card components."
 ---
 
 <div class="content-row">
   <h2>Overview</h2>
   <div class="content-body">
     <p>Sales reps at commercial vehicle dealerships relied on a CRM system to track buyers, manage leads, and stay on top of deal activity. But the platform was built for desktop, and the reality of dealership work happens on the lot, on the road, and away from a desk. When reps tried to check deal status or respond to buyer updates on their phones, they hit walls — data-heavy tables that were nearly unusable on mobile, and a single-screen layout built around dialog windows that couldn't scale to the richer experience users needed.</p>
+
+    <img class="project-image" src="{{ page.images.project[0].src | relative_url }}" alt="{{ page.images.project[0].alt }}">
+    <p class="image-caption">{{ page.images.project[0].caption }}</p>
 
     <p>This project was a full redesign of the mobile experience, rethinking navigation, simplifying complex data displays, and building a design system from the ground up to establish consistency across the platform. The result was a linear, mobile-optimized interface that put the most critical actions front and center, and a design system that became the gold standard for the rest of the product suite.</p>
   </div>
@@ -51,6 +62,10 @@ images:
   <h2>Solution</h2>
   <div class="content-body">
     <p>Linear navigation structure (search → buyer details), card-based layout replacing tables, dedicated buyer detail pages with tabbed sections for opportunities and activity, prominent CTAs for key actions (status changes, messaging), icon system for communication types, comprehensive design system establishing component standards and usage guidelines.</p>
+
+    <img class="project-image" src="{{ page.images.project[1].src | relative_url }}" alt="{{ page.images.project[1].atl }}">
+    <p class="image-caption">{{ page.images.project[1].caption }}</p>
+    
   </div>
 </div>
 
@@ -66,4 +81,8 @@ images:
   <div class="content-body">
     <p>Importance of transparent communication and documentation, balancing innovation with change management, understanding when to propose future enhancements vs. current-phase work.</p>
   </div>
+</div>
+
+<div class="content-row">
+  <h4 class="center"><a href="mailto:{{ site.email }}">Contact me</a> for more details and work examples.  Available by request.</h4>
 </div>
