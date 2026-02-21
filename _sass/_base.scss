@@ -52,11 +52,25 @@ p {
 
 a {
     color: $accent-color;
-    text-decoration: none;
+    text-decoration: underline rgba($accent-color, 0);
+    transition: text-decoration-color 0.2s ease;
     
     &:hover {
-        text-decoration: underline;
+        text-decoration-color: $accent-color;
+        text-decoration-color: rgba($accent-color, 1);
     }
+
+    // a {
+    //     color: $white;
+    //     text-decoration: underline rgba($accent-color, 0);
+    //     transition: text-decoration-color 0.3s ease;
+
+    //     &:hover {
+    //         text-decoration-color: $accent-color;
+    //         text-decoration-color: rgba($accent-color, 1);
+            
+    //     }
+    // }
 }
 
 ul {

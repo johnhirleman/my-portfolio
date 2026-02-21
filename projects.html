@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Projects
+
+quote: "Here are some projects I'm proud to talk about. Some finished, some still in progress. Please note that details of some projects are confidential, so reach out to me if you want to know more!"
 ---
 
 <article>
@@ -11,10 +13,13 @@ title: Projects
         {% for project in site.projects %}
             {% unless project.hidden %}
                 <a href="{{ project.url | relative_url }}" class="project-item">
-                    {% if project.image %}
-                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                    {% if project.images.thumb %}
+                    <img src="{{ project.images.thumb | relative_url }}" alt="{{ project.title }}">
                     {% else %}
                     <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
+                    {% endif %}
+                    {% if project.in_progress %}
+                    <span class="in-progress-badge">In Progress</span>
                     {% endif %}
                     <h3>{{ project.title }}</h3>
                     <p>{{ project.excerpt | strip_html | truncate: 100 | remove: "Overview" }}</p>

@@ -12,9 +12,10 @@
         {% include navigation.html %}
     </div>
 
-    {% if page.quote %}
+    {% assign sidebar_quote = page.quote | default: layout.quote %}
+    {% if sidebar_quote %}
     <section class="sidebar-quote">
-        <p>{{ page.quote }}</p>
+        <p>{{ sidebar_quote }}</p>
     </section>
     {% endif %}
 

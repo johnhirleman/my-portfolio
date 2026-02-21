@@ -1,6 +1,9 @@
 // Variables
 $primary-color: #2c3e50;
 $accent-color: #3498db;
+$warning-color: #e67e22;
+$error-color: #e74c3c;
+$success-color: #2ecc71;
 $text-color: #333;
 $light-bg: #ecf0f1;
 $white: #ffffff;
@@ -10,3 +13,8 @@ $box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
 $padding: .5rem;
 $border-radius: .5rem;
+
+// Breakpoints
+$breakpoint-medium: 1280px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;

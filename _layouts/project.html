@@ -11,6 +11,10 @@ layout: default
             {% if page.date %}
             <span class="project-date">{{ page.date | date: "%B %Y" }}</span>
             {% endif %}
+
+            {% if page.in_progress %}
+            <span class="in-progress-badge">In Progress</span>
+            {% endif %}
             
             {% if page.github %}
             <a href="{{ page.github }}" target="_blank" class="project-link">GitHub →</a>
@@ -22,7 +26,7 @@ layout: default
         </div>
 
         {% if page.images %}
-        <img src="{{ page.images.hero[0] }}" alt="{{ page.title }}" class="project-hero-image">
+        <img src="{{ page.images.hero | relative_url }}" alt="{{ page.title }}" class="project-hero-image">
         {% endif %}
 
     </header>
@@ -31,7 +35,7 @@ layout: default
         {{ content }}
     </div>
     
-    <footer class="project-footer">
-        <a href="{{ '/projects.html' | relative_url }}" class="back-link">← Back to Projects</a>
-    </footer>
+    <div class="project-footer">
+        <a href="{{ '/projects.html' | relative_url }}" class="back-link"><i class="fas fa-arrow-circle-left"></i>Back to Projects</a>
+    </div>
 </article>

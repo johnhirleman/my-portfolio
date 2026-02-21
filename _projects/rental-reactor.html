@@ -2,6 +2,8 @@
 layout: project
 title: 'Rental Reactor: Centralizing RV Rental Management'
 date: 2025-09-01
+featured: true
+in_progress: true
 
 #tech:
 #  - React
@@ -20,8 +22,12 @@ skills:
   - Cross Team Collaboration
 
 images:
-  hero:
-    - "https://placehold.co/1200x600.png"
+  thumb: assets/images/rentalreactor/rentalreactor_project.jpg
+  hero: "assets/images/rentalreactor/rentalreactor_hero.jpg"
+  project:
+    - src: assets/images/rentalreactor/rentalreactor_solution.jpg
+      alt: "Rental Reactor's Dashboard"
+      caption: "Rental Reactor's Dashboard shows the current state of your listings and booking status."
 
 hidden: false
 ---
@@ -52,6 +58,9 @@ hidden: false
   <h2>Solution</h2>
   <div class="content-body">
     <p>Centralized dashboard showing revenue, occupancy, pending messages, active bookings, and fleet status. Listing management with cards displaying images, title, specs, ratings, current status (with guest/available/maintenance), and listing platform labels. Master calendar with color-coded view of all bookings and blackout dates across trailers. Unified messaging inbox with platform labels, listing context, and unread indicators. AI agent with approval-based reply system including thumbs up/edit feedback loop for training. Listing detail pages with rental history, financials, analytics, and credential management for third-party platforms. Status indicators (green/yellow/red) for AI scraping health. Global sidebar navigation throughout experience.</p>
+
+    <img class="project-image" src="{{ page.images.project[0].src | relative_url }}" alt="{{ page.images.project[0].alt }}">
+    <p class="image-caption">{{ page.images.project[0].caption }}</p>
   </div>
 </div>
 

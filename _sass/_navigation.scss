@@ -21,13 +21,10 @@
         margin: 0;
         padding: $padding;
 
-        li {
-            // border-color: $white;
-        }
     }
 
     .nav-link {
-        display: inline-block;
+        display: inline;
         white-space: nowrap;
         color: $text-color;
         text-decoration: none;
@@ -69,7 +66,7 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
 
     .mobile-menu-toggle {
         display: block;
@@ -97,7 +94,7 @@
         position: absolute;
         top: 5rem;
         right: 1rem;
-    
+
         .container {
 
             ul.nav-menu {
@@ -110,6 +107,15 @@
 
             }
         }
+    }
+
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
     }
 
 }

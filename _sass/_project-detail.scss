@@ -13,7 +13,7 @@
             width: 100%;
             max-height: 500px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: $border-radius;
         }
         
         h1 {
@@ -32,7 +32,7 @@
                 color: #7f8c8d;
                 font-size: 1rem;
             }
-            
+
             .project-link {
                 color: $accent-color;
                 font-weight: 600;
@@ -135,8 +135,21 @@
         }
 
         .content-body {
+            display: flex;
+            flex-direction: column;
             flex: 7;
             margin-bottom: 4rem;
+
+            .project-image {
+                width: 100%;
+                object-fit: cover;
+                border-radius: $border-radius;
+            }
+
+            p.image-caption {
+                color: color.adjust($primary-color, $lightness: 33%);
+                font-size: .8rem;
+            }
         }
     }
     
@@ -144,16 +157,67 @@
         margin-top: 4rem;
         padding-top: 2rem;
         border-top: 2px solid $light-bg;
-        
+
         .back-link {
-            color: $accent-color;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            
-            &:hover {
-                color: color.adjust($accent-color, $lightness: 10%);
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            padding-left: .5rem;
+
+            i.fa-arrow-circle-left {
+                position: relative;
+                transform: translateX(0);
+                transition: transform .25s ease-in-out;
+                margin-right: .25rem;
             }
+
+            &:hover i.fa-arrow-circle-left {
+                transform: translateX(-.25rem);
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .content-row {
+        display: block !important;
+    }
+}
+
+.in-progress-badge {
+    background-color: $warning-color;
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .project-detail {
+        padding: 0;
+
+        .project-header h1 {
+            font-size: 1.5rem;
+        }
+
+        .content-row {
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            h2 {
+                flex: none;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+            }
+        }
+
+        .content-body {
+            flex: none;
+            margin-bottom: 0;
         }
     }
 }

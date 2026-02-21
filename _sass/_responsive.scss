@@ -4,76 +4,9 @@
 // Responsive
 
 //Tablet
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
     .layout-wrapper {
-
-        .sidebar {
-            width: $sidebar-width;
-            padding: 1rem;
-            flex-shrink: 0;
-            position: static;
-            height: auto;
-
-            //sidebar elements
-            .avatar img {
-                height: 75px;
-                width: 75px;
-                border: .25rem solid $accent-color;
-                object-position: top -1rem left 0
-            }
-
-            .profile-name {
-                font-size: 1.25rem;
-
-            }
-        }
-
-        .main-content {
-            margin-left: 0;
-            flex: 1;
-            padding: 2rem;
-        }
-
-            //project detail content
-    
-        .project-detail {
-            padding: 0;
-
-            .project-header h1 {
-                font-size: 1.5rem;
-            }
-
-            .content-row {
-            flex-direction: column;
-            gap: 1rem;
-            margin-bottom: 1rem;
-
-            h2 {
-                flex: none;
-                margin-bottom: 1rem;
-                font-size: 1.3rem;
-            }
-        }
-
-            .content-body {
-                flex: none;
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
-//Mobile
-@media (max-width: 768px) {
-    .layout-wrapper, .home-layout {
         flex-direction: column;
-
-        .sidebar {
-            width: 100%;
-            position: static;
-            height: auto;
-            padding: 2rem 1.5rem;
-        }
 
         .main-content {
             margin: 0;
@@ -81,27 +14,4 @@
             padding: 1rem;
         }
     }
-
-    //project items
-    .project-item {
-        flex: 0 0 300px;
-    }
-
-    //experience cards
-    .experience-meta {
-        flex-direction: column;
-        gap: 0.5rem !important;
-    }
-
-    //navigation
-    .nav-menu {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-
-    //project grid page
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
 }
