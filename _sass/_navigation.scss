@@ -74,6 +74,11 @@
         margin-right: 0;
         margin-left: auto;
         position: static;
+        border: none;
+        border-radius: .5rem;
+        padding: .5rem;
+        font-size: 1.25rem;
+        color: color.adjust($text-color, $lightness: 20%);
 
     }
 
@@ -101,6 +106,7 @@
                 flex-direction: column;
 
                 .nav-link {
+                    display: block;
                     width: 100%;
                     text-align: center;
                 }

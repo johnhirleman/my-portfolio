@@ -101,6 +101,17 @@
         
     }
 
+    .sidebar-btn {
+        display: none;
+        margin-left: 50%;
+        height: 2rem;
+        width: 2rem;
+        border: none;
+        border-radius: 100%;
+        background-color: $accent-color;
+        color: $white;
+    }
+
 
 }
 
@@ -183,6 +194,7 @@
         width: 100%;
         position: static;
         height: auto;
+        overflow: visible;
         padding: 1rem;
 
         .avatar img {
@@ -197,21 +209,45 @@
         }
     }
 
-    .sidebar-content .sidebar-header {
-        grid-template-columns: auto auto 1fr;
-        margin-bottom: 1rem;
-
-        .avatar, .profile-name {
-            margin-bottom: 0;
-        }
-
-    }
-
     .sidebar-content {
         max-width: 100%;
 
         .sidebar-header {
             grid-template-columns: auto auto 1fr;
+            margin-bottom: 1rem;
+        }
+
+        .avatar, .profile-name {
+            margin-bottom: 0;
+        }
+
+        .sidebar-btn {
+            display: block;
+        }
+
+        .sidebar-section {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+            margin: 0;
+        }
+
+        &.sidebar-expanded {
+
+            .sidebar-section {
+                max-height: 800px;
+                opacity: 1;
+                margin-bottom: 1rem;
+            }
+
+            .sidebar-quote {
+                margin-bottom: 0;
+            }
+        }
+
+        .sidebar-btn i {
+            transition: transform 0.5s ease;
         }
     }
 
