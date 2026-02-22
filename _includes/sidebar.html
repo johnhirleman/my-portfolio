@@ -57,6 +57,10 @@
     </section>
     {% endif %}
     
-    <button class="sidebar-btn"><i class="fas fa-chevron-down"></i></button>
+    {% if page.title != "Home" %}
+    <button class="sidebar-btn"><i class="fas fa-chevron-down"></i> Project Skills</button>
+    {% else %}
+    <button class="sidebar-btn"><i class="fas fa-chevron-down"></i> Contact & Skills</button>
+    {% endif %}
 
 </div>
