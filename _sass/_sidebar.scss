@@ -107,15 +107,8 @@
     }
 
     .sidebar-btn {
+        @include mixins.parimary-btn($padding, $border-radius, $box-shadow);
         display: none;
-        border: none;
-        border-radius: .5rem;
-        background-color: color.adjust($primary-color, $lightness: 10%);
-        color: $white;
-        padding: .5rem 1rem;
-        margin: 0 auto;
-        box-shadow: $box-shadow;
-        font-size: 1rem;
 
         i {
             margin-left: .5rem;
@@ -224,7 +217,6 @@
 
         .sidebar-header {
             grid-template-columns: auto auto 1fr;
-            margin-bottom: 0;
         }
 
         .avatar, .profile-name {

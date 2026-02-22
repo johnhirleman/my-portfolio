@@ -5,165 +5,167 @@ title: Home
 quote: "Thanks for stopping by to check out my portfolio!  Here, you can see a few of the projects I'm excited to talk about.  If you have any questions, please reach out to me."
 ---
 
-<section class="intro-section">
-    <h2>Intro</h2>
-    <p>
-        {% assign start_year = 2012 %}
-        {% assign current_year = site.time | date: "%Y" %}
-        {% assign years_experience = current_year | minus: start_year %}
-        I'm a UX/UI software designer and frontend developer with {{ years_experience }} years of experience. What I do best is objective, creative problem solving — working with a team to come up with multiple potential solutions and working through the merits of each one to satisfy data driven analysis. I'm foremost a hands-on designer in Adobe XD, Figma, and Framer, but I am also comfortable working with code and contributing to frontend implementation. I've designed and built solutions for large ecommerce companies, startups, automotive marketplaces, and have even dabbled in some freelance work.
-     </p>
-</section>
+<article class="homepage-detail">
+    <section class="intro-section">
+        <h2>Intro</h2>
+        <p>
+            {% assign start_year = 2012 %}
+            {% assign current_year = site.time | date: "%Y" %}
+            {% assign years_experience = current_year | minus: start_year %}
+            I'm a UX/UI software designer and frontend developer with {{ years_experience }} years of experience. What I do best is objective, creative problem solving — working with a team to come up with multiple potential solutions and working through the merits of each one to satisfy data driven analysis. I'm foremost a hands-on designer in Adobe XD, Figma, and Framer, but I am also comfortable working with code and contributing to frontend implementation. I've designed and built solutions for large ecommerce companies, startups, automotive marketplaces, and have even dabbled in some freelance work.
+        </p>
+    </section>
 
-<section class="projects-section">
-    <h2>Featured Projects</h2>
-    <div class="projects-carousel">
-        <button class="carousel-btn carousel-btn-left" aria-label="Scroll left" disabled>
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="projects-scroll">
-            {% assign featured_projects = site.projects | where: "featured", true | sort: "featured_order:1" %}
-            {% for project in featured_projects limit:4 %}
-                {% unless project.hidden %}
-                    <a href="{{ project.url | relative_url }}" class="project-item">
-                        {% if project.images.thumb %}
-                        <img src="{{ project.images.thumb | relative_url }}" alt="{{ project.title }}">
-                        {% else %}
-                        <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
-                        {% endif %}
-                        {% if project.in_progress %}
-                        <span class="in-progress-badge">In Progress</span>
-                        {% endif %}
-                        <h3>{{ project.title }}</h3>
-                        <p>{{ project.excerpt | strip_html | truncate: 100 | remove: "Overview" }}</p>
-                    </a>
-                {% endunless %}
-            {% endfor %}
+    <section class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projects-carousel">
+            <button class="carousel-btn carousel-btn-left" aria-label="Scroll left" disabled>
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="projects-scroll">
+                {% assign featured_projects = site.projects | where: "featured", true | sort: "featured_order:1" %}
+                {% for project in featured_projects limit:4 %}
+                    {% unless project.hidden %}
+                        <a href="{{ project.url | relative_url }}" class="project-item">
+                            {% if project.images.thumb %}
+                            <img src="{{ project.images.thumb | relative_url }}" alt="{{ project.title }}">
+                            {% else %}
+                            <img src="https://placehold.co/600x400.png" alt="{{ project.title }}">
+                            {% endif %}
+                            {% if project.in_progress %}
+                            <span class="in-progress-badge">In Progress</span>
+                            {% endif %}
+                            <h3>{{ project.title }}</h3>
+                            <p>{{ project.excerpt | strip_html | truncate: 100 | remove: "Overview" }}</p>
+                        </a>
+                    {% endunless %}
+                {% endfor %}
 
-            {% if site.projects.size == 0 %}
-                <div class="project-item">
-                    <img src="https://placehold.co/600x400.png" alt="Project 1">
-                    <h3>Project Name 1</h3>
-                    <p>Brief project description</p>
-                </div>
-                <div class="project-item">
-                    <img src="https://placehold.co/600x400.png" alt="Project 2">
-                    <h3>Project Name 2</h3>
-                    <p>Brief project description</p>
-                </div>
-                <div class="project-item">
-                    <img src="https://placehold.co/600x400.png" alt="Project 3">
-                    <h3>Project Name 3</h3>
-                    <p>Brief project description</p>
-                </div>
-            {% endif %}
+                {% if site.projects.size == 0 %}
+                    <div class="project-item">
+                        <img src="https://placehold.co/600x400.png" alt="Project 1">
+                        <h3>Project Name 1</h3>
+                        <p>Brief project description</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://placehold.co/600x400.png" alt="Project 2">
+                        <h3>Project Name 2</h3>
+                        <p>Brief project description</p>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://placehold.co/600x400.png" alt="Project 3">
+                        <h3>Project Name 3</h3>
+                        <p>Brief project description</p>
+                    </div>
+                {% endif %}
+            </div>
+            <button class="carousel-btn carousel-btn-right" aria-label="Scroll right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-        <button class="carousel-btn carousel-btn-right" aria-label="Scroll right">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
-</section>
+    </section>
 
-<section id="experience" class="experience-section">
-    <h2>Experience</h2>
+    <section id="experience" class="experience-section">
+        <h2>Experience</h2>
 
-    <div class="experience-card">
-        <h3>Senior UX/UI Designer, Front-end Developer</h3>
-        <div class="experience-meta">
-            <span class="date-range">Sep 2025 - Present</span>
-            <span class="employer">Rental Reactor</span>
-            <span class="location"><i class="fas fa-location-dot"></i> (Remote)</span>
+        <div class="experience-card">
+            <h3>Senior UX/UI Designer, Front-end Developer</h3>
+            <div class="experience-meta">
+                <span class="date-range">Sep 2025 - Present</span>
+                <span class="employer">Rental Reactor</span>
+                <span class="location"><i class="fas fa-location-dot"></i> (Remote)</span>
+            </div>
+            <p>
+                Principal UX/UI Product designer for SaaS rental management platform.  Leading design system creation and implementation to ensure consistency across web and mobile applications.  Collaborating with cross-functional teams to deliver user-centered designs that enhance user experience and drive business growth.
+            </p>
         </div>
-        <p>
-            Principal UX/UI Product designer for SaaS rental management platform.  Leading design system creation and implementation to ensure consistency across web and mobile applications.  Collaborating with cross-functional teams to deliver user-centered designs that enhance user experience and drive business growth.
-        </p>
-    </div>
-    
-    <div class="experience-card">
-        <h3>Front-end UX/UI Designer, Product Design</h3>
-        <div class="experience-meta">
-            <span class="date-range">Apr 2019 - Jun 2025</span>
-            <span class="employer">Work Truck Solutions</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA (Remote)</span>
+        
+        <div class="experience-card">
+            <h3>Front-end UX/UI Designer, Product Design</h3>
+            <div class="experience-meta">
+                <span class="date-range">Apr 2019 - Jun 2025</span>
+                <span class="employer">Work Truck Solutions</span>
+                <span class="location"><i class="fas fa-location-dot"></i> Chico, CA (Remote)</span>
+            </div>
+            <p>
+                Principal UX/UI Product designer for various B2B and B2C products including internal tools, CRM, and national marketplace Comvoy.  Established design systems and patterns for multiple products to ensure consistency across platforms and streamline development processes.  Collaborated closely with product managers, developers, and stakeholders to deliver user-centered designs that meet business goals.
+            </p>
         </div>
-        <p>
-            Principal UX/UI Product designer for various B2B and B2C products including internal tools, CRM, and national marketplace Comvoy.  Established design systems and patterns for multiple products to ensure consistency across platforms and streamline development processes.  Collaborated closely with product managers, developers, and stakeholders to deliver user-centered designs that meet business goals.
-        </p>
-    </div>
-    
-    <div class="experience-card">
-        <h3>UX/UI Designer, Front-End Developer</h3>
-        <div class="experience-meta">
-            <span class="date-range">Mar 2016 - Apr 2019</span>
-            <span class="employer">The Distribution Point (Need Direct)</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+        
+        <div class="experience-card">
+            <h3>UX/UI Designer, Front-End Developer</h3>
+            <div class="experience-meta">
+                <span class="date-range">Mar 2016 - Apr 2019</span>
+                <span class="employer">The Distribution Point (Need Direct)</span>
+                <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+            </div>
+            <p>
+                Product development from conceptualization of new features to optimizing existing features for a frictionless home improvement shopping experience.  Led design and front-end development effort for Shopify migration.
+            </p>
         </div>
-        <p>
-            Product development from conceptualization of new features to optimizing existing features for a frictionless home improvement shopping experience.  Led design and front-end development effort for Shopify migration.
-        </p>
-    </div>
-    
-    <div class="experience-card">
-        <h3>Product UX/UI Developer</h3>
-        <div class="experience-meta">
-            <span class="date-range">May 2015 - Jan 2016</span>
-            <span class="employer">Design by Humans</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+        
+        <div class="experience-card">
+            <h3>Product UX/UI Developer</h3>
+            <div class="experience-meta">
+                <span class="date-range">May 2015 - Jan 2016</span>
+                <span class="employer">Design by Humans</span>
+                <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+            </div>
+            <p>
+                Design, document, implement, and improve product features.  Write semantic HTML/CSS for front-end implementation of custom sites.
+            </p>
         </div>
-        <p>
-            Design, document, implement, and improve product features.  Write semantic HTML/CSS for front-end implementation of custom sites.
-        </p>
-    </div>
 
-    <div class="experience-card">
-        <h3>UX/UI Designer, Front-End Developer (E-Commerce)</h3>
-        <div class="experience-meta">
-            <span class="date-range">Mar 2012 - May 2015</span>
-            <span class="employer">Build.com (Ferguson Enterprises)</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+        <div class="experience-card">
+            <h3>UX/UI Designer, Front-End Developer (E-Commerce)</h3>
+            <div class="experience-meta">
+                <span class="date-range">Mar 2012 - May 2015</span>
+                <span class="employer">Build.com (Ferguson Enterprises)</span>
+                <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+            </div>
+            <p>
+                Contributed to front-end design efforts for national home improvement ecommerce marketplace.  Involved in A/B testing, internal and marketplace search enhancement, CMS, CRM, and principal designer for mobile Angular platform.
+            </p>
         </div>
-        <p>
-            Contributed to front-end design efforts for national home improvement ecommerce marketplace.  Involved in A/B testing, internal and marketplace search enhancement, CMS, CRM, and principal designer for mobile Angular platform.
-        </p>
-    </div>
 
-    <div class="experience-card">
-        <h3>Graphic Design, UX Design Intern</h3>
-        <div class="experience-meta">
-            <span class="date-range">Jun 2008 - Dec 2008</span>
-            <span class="employer">Build.com (Ferguson Enterprises)</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+        <div class="experience-card">
+            <h3>Graphic Design, UX Design Intern</h3>
+            <div class="experience-meta">
+                <span class="date-range">Jun 2008 - Dec 2008</span>
+                <span class="employer">Build.com (Ferguson Enterprises)</span>
+                <span class="location"><i class="fas fa-location-dot"></i> Chico, CA</span>
+            </div>
+            <p>
+                Designed graphics and layouts for various marketing campaigns, emails, and assisted in UX design projects for national home improvement ecommerce marketplace.
+            </p>
         </div>
-        <p>
-            Designed graphics and layouts for various marketing campaigns, emails, and assisted in UX design projects for national home improvement ecommerce marketplace.
-        </p>
-    </div>
-</section>
+    </section>
 
-<section id="education" class="education-section">
-    <h2>Education</h2>
-    
-    <div class="experience-card">
-        <h3>Web Design & New Media</h3>
-        <div class="experience-meta">
-            <span class="date-range">2009 - 2012</span>
-            <span class="school">Academy of Art University</span>
-            <span class="location"><i class="fas fa-location-dot"></i> San Francisco, CA</span>
+    <section id="education" class="education-section">
+        <h2>Education</h2>
+        
+        <div class="experience-card">
+            <h3>Web Design & New Media</h3>
+            <div class="experience-meta">
+                <span class="date-range">2009 - 2012</span>
+                <span class="school">Academy of Art University</span>
+                <span class="location"><i class="fas fa-location-dot"></i> San Francisco, CA</span>
+            </div>
+            <p>
+                Studied web design and new media. Everything from formal graphic design practices to illustration, materials design, branding campaigns, motion graphics, traditional print, web and information design.
+            </p>
         </div>
-        <p>
-            Studied web design and new media. Everything from formal graphic design practices to illustration, materials design, branding campaigns, motion graphics, traditional print, web and information design.
-        </p>
-    </div>
-    
-    <div class="experience-card">
-        <h3>Multimedia Studies Program</h3>
-        <div class="experience-meta">
-            <span class="date-range">2004 - 2007</span>
-            <span class="school">Butte College</span>
-            <span class="location"><i class="fas fa-location-dot"></i> Oroville, CA</span>
+        
+        <div class="experience-card">
+            <h3>Multimedia Studies Program</h3>
+            <div class="experience-meta">
+                <span class="date-range">2004 - 2007</span>
+                <span class="school">Butte College</span>
+                <span class="location"><i class="fas fa-location-dot"></i> Oroville, CA</span>
+            </div>
+            <p>
+                Activities and societies: STAND (Student Training And New Design).  Digital graphic design, web design, photography and illustration.
+            </p>
         </div>
-        <p>
-            Activities and societies: STAND (Student Training And New Design).  Digital graphic design, web design, photography and illustration.
-        </p>
-    </div>
-</section>
+    </section>
+</article>

@@ -32,11 +32,10 @@
         transition: border 0.3s ease;
         padding: .5rem 1rem;
         border-radius: $border-radius;
-        border: 1px solid color.adjust($white, $lightness: -10%);
+        border: 1px solid $light-gray-color;
         
         &:hover {
             border-bottom: 3px solid $accent-color;
-            color: $accent-color;
         }
         
         &.active {
@@ -58,7 +57,8 @@
 }
 
 .mobile-menu-toggle {
-    @include mixins.navigation($padding, $box-shadow, $border-radius);
+    @include mixins.parimary-btn($padding, $border-radius, $box-shadow);
+    // border: 1px solid color.adjust($primary-color, $lightness: 20%);
     display: none;
 }
 
@@ -74,11 +74,11 @@
         margin-right: 0;
         margin-left: auto;
         position: static;
-        border: none;
-        border-radius: .5rem;
-        padding: .5rem;
-        font-size: 1.25rem;
-        color: color.adjust($text-color, $lightness: 20%);
+        // border: none;
+        // border-radius: .5rem;
+        // padding: .5rem;
+        // font-size: 1.25rem;
+        // color: $off-white;
 
     }
 

@@ -7,7 +7,8 @@ $success-color: #2ecc71;
 $text-color: #333;
 $light-bg: #ecf0f1;
 $white: #ffffff;
-$off-white: #fafafa;
+$off-white: #f1f1f1;
+$light-gray-color: #ccc;
 $sidebar-width: 400px;
 $box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
@@ -15,6 +16,7 @@ $padding: .5rem;
 $border-radius: .5rem;
 
 // Breakpoints
+$breakpoint-large: 1680px;
 $breakpoint-medium: 1280px;
 $breakpoint-tablet: 1024px;
 $breakpoint-mobile: 768px;

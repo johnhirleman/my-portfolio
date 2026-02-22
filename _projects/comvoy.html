@@ -27,6 +27,9 @@ images:
   thumb: assets/images/comvoy/comvoy_project.jpg
   hero: assets/images/comvoy/comvoy_hero.jpg
   project:
+    - src: assets/images/comvoy/comvoy_old_homepage.jpg
+      alt: "Old Comvoy homepage design"
+      caption: "Comvoy's homepage design aesthetics prior to 2025.  It featured more content driven focus like articles and exposition for vocations and lacked buyer engagement."
     - src: assets/images/comvoy/comvoy_filters_evolution.jpg
       alt: "Comvoy filters evolution"
       caption: "The refined evolution of Comvoy filters sidebar."
@@ -52,8 +55,10 @@ hidden: false
 <div class="content-row">
   <h2>Building Comvoy from the Ground Up (2019-2025)</h2>
   <div class="content-body">
-    <p>Comvoy is a national marketplace for commercial work trucks connecting dealers across the country with individual buyers and fleet managers. As the principal designer from inception through 2025, I was responsible for establishing the visual identity, navigation structure, and user experience working directly with the CEO. The platform launched quickly by leveraging existing SaaS architecture for the vehicle search page (VSP) and vehicle detail page (VDP), which allowed rapid deployment but carried technical limitations and outdated UX patterns not optimized for a large national marketplace.
-</p>
+    <p>Comvoy is a national marketplace for commercial work trucks connecting dealers across the country with individual buyers and fleet managers. As the principal designer from inception through 2025, I was responsible for establishing the visual identity, navigation structure, and user experience working directly with the CEO. The platform launched quickly by leveraging existing SaaS architecture for the vehicle search page (VSP) and vehicle detail page (VDP), which allowed rapid deployment but carried technical limitations and outdated UX patterns not optimized for a large national marketplace.</p>
+
+    <img class="project-image" src="{{ page.images.project[0].src | relative_url }}" alt="{{ page.images.project[0].alt }}">
+    <p class="image-caption">{{ page.images.project[0].caption }}</p>
   </div>
 </div>
 
@@ -62,8 +67,8 @@ hidden: false
   <div class="content-body">
     <p>The inherited architecture presented significant constraints. The VSP featured an exhaustive, poorly organized filter sidebar listing every search category with raw data rather than strategic hierarchy. Vehicle cards displayed in list style with two small images instead of a modern card layout. The VDP used a cramped three-column layout that created visual strain and buried important information. The color scheme (racing orange and teal) felt off-brand for the work truck demographic. Primary CTAs like "I'm interested" tested poorly compared to alternatives. Leadership resistance to change slowed evolution, prioritizing dealer-focused content features (dealership directory, "best in show" galleries) over buyer experience improvements, despite advocacy from both design and product teams.</p>
 
-    <img class="project-image" src="{{ page.images.project[0].src | relative_url }}" alt="{{ page.images.project[0].alt }}">
-    <p class="image-caption">{{ page.images.project[0].caption }}</p>
+    <img class="project-image" src="{{ page.images.project[1].src | relative_url }}" alt="{{ page.images.project[1].alt }}">
+    <p class="image-caption">{{ page.images.project[1].caption }}</p>
 
   </div>
 </div>
@@ -82,13 +87,13 @@ hidden: false
 
     <p>VSP redesign proposed card-based layout (three per row on desktop) with single large vehicle image, carousel gallery, streamlined attributes, clear pricing, location, and "Check availability" CTA. Filter sidebar simplified through nested categories with overflow scrolling, reducing overall height. Mobile filters showed minimized top-used options with "View all" for refined search.</p>
 
-    <img class="project-image" src="{{ page.images.project[1].src | relative_url }}" alt="{{ page.images.project[1].alt }}">
-    <p class="image-caption">{{ page.images.project[0].caption }}</p>
+    <img class="project-image" src="{{ page.images.project[2].src | relative_url }}" alt="{{ page.images.project[2].alt }}">
+    <p class="image-caption">{{ page.images.project[2].caption }}</p>
 
     <p>VDP redesign emphasized vehicle images and attributes in a 2/3 layout with larger image gallery, refined specifications display, and reduced visual strain from the old three-column tables. Pricing, rebates, and lead form occupied the remaining third. <b>This VDP redesign has not yet been fully adopted by the current team.</b></p>
 
-    <img class="project-image" src="{{ page.images.project[2].src | relative_url }}" alt="{{ page.images.project[2].alt }}">
-    <p class="image-caption">{{ page.images.project[0].caption }}</p>
+    <img class="project-image" src="{{ page.images.project[3].src | relative_url }}" alt="{{ page.images.project[3].alt }}">
+    <p class="image-caption">{{ page.images.project[3].caption }}</p>
 
     <p>Navigation simplified the mega menu from multiple columns and ads to focused body types, popular brands, and upfit manufacturers.</p>
   </div>

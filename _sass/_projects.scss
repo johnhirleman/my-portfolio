@@ -15,7 +15,7 @@
     }
 }
 
-@media (max-width: 1680px) {
+@media (max-width: $breakpoint-large) {
     #projects {
         .projects-grid {
             grid-template-columns: repeat(2, 1fr);
@@ -23,20 +23,7 @@
     }
 }
 
-@media (max-width: $breakpoint-tablet) {
-    #projects {
-        
-        article {
-            padding: 0;
-        }
-        
-        .projects-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-medium) {
     #projects {
         .projects-grid {
             grid-template-columns: repeat(1, 1fr);
