@@ -109,11 +109,17 @@
     .sidebar-btn {
         display: none;
         border: none;
-        border-radius: 1rem;
-        background-color: $primary-color;
+        border-radius: .5rem;
+        background-color: color.adjust($primary-color, $lightness: 10%);
         color: $white;
         padding: .5rem 1rem;
         margin: 0 auto;
+        box-shadow: $box-shadow;
+        font-size: 1rem;
+
+        i {
+            margin-left: .5rem;
+        }
     }
 
 
@@ -218,7 +224,7 @@
 
         .sidebar-header {
             grid-template-columns: auto auto 1fr;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
 
         .avatar, .profile-name {
