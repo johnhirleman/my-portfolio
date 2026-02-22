@@ -7,7 +7,8 @@
     width: $sidebar-width;
     background: linear-gradient(to right, $primary-color, color.adjust($primary-color, $lightness: -10%,), $primary-color);
     color: $white;
-    position: fixed;
+    position: sticky;
+    top: 0;
     height: 100vh;
     overflow-y: auto;
     padding: 3rem 2rem;
@@ -19,17 +20,18 @@
     
     .sidebar-header {
         display: grid;
+        grid-template-columns: auto 1fr;
         align-items: center;
         gap: 1rem;
-
+        margin-bottom: 1rem;
     }
 
     .avatar {
         text-align: center;
         
         img {
-            width: 125px;
-            height: 125px;
+            width: 115px;
+            height: 115px;
             border-radius: 50%;
             border: .5rem solid $accent-color;
             object-fit: cover;
@@ -40,6 +42,10 @@
     }
 
     h1.profile-name {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-align: center;
+        color: $white;
 
         a {
             color: $white;
@@ -68,7 +74,7 @@
             content: '';
             position: absolute;
             top: -10px;
-            left: 10%;
+            left: 2.5rem;
             width: 0;
             height: 0;
             border-bottom: 10px solid $off-white;
@@ -98,6 +104,22 @@
         }
         
         
+    }
+
+    .sidebar-btn {
+        display: none;
+        border: none;
+        border-radius: .5rem;
+        background-color: color.adjust($primary-color, $lightness: 10%);
+        color: $white;
+        padding: .5rem 1rem;
+        margin: 0 auto;
+        box-shadow: $box-shadow;
+        font-size: 1rem;
+
+        i {
+            margin-left: .5rem;
+        }
     }
 
 
@@ -182,28 +204,19 @@
         width: 100%;
         position: static;
         height: auto;
+        overflow: visible;
         padding: 1rem;
 
         .avatar img {
-            height: 75px;
-            width: 75px;
-            border: .25rem solid $accent-color;
+            height: 100px;
+            width: 100px;
+            border: .33rem solid $accent-color;
             object-position: top -1rem left 0;
         }
 
         .profile-name {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
         }
-    }
-
-    .sidebar-content .sidebar-header {
-        grid-template-columns: auto auto 1fr;
-        margin-bottom: 1rem;
-
-        .avatar, .profile-name {
-            margin-bottom: 0;
-        }
-
     }
 
     .sidebar-content {
@@ -211,6 +224,40 @@
 
         .sidebar-header {
             grid-template-columns: auto auto 1fr;
+            margin-bottom: 0;
+        }
+
+        .avatar, .profile-name {
+            margin-bottom: 0;
+        }
+
+        .sidebar-btn {
+            display: block;
+        }
+
+        .sidebar-section {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+            margin: 0;
+        }
+
+        &.sidebar-expanded {
+
+            .sidebar-section {
+                max-height: 800px;
+                opacity: 1;
+                margin-bottom: 1rem;
+            }
+
+            .sidebar-quote {
+                margin-bottom: 0;
+            }
+        }
+
+        .sidebar-btn i {
+            transition: transform 0.5s ease;
         }
     }
 

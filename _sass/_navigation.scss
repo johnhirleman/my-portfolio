@@ -74,6 +74,11 @@
         margin-right: 0;
         margin-left: auto;
         position: static;
+        border: none;
+        border-radius: .5rem;
+        padding: .5rem;
+        font-size: 1.25rem;
+        color: color.adjust($text-color, $lightness: 20%);
 
     }
 
@@ -92,17 +97,21 @@
 
     .mobile-nav .navbar {
         position: absolute;
-        top: 5rem;
+        top: 6rem;
         right: 1rem;
+        width: 200px;
 
         .container {
+            display: block;
 
             ul.nav-menu {
                 flex-direction: column;
 
                 .nav-link {
+                    display: block;
                     width: 100%;
                     text-align: center;
+                    font-size: larger;
                 }
 
             }

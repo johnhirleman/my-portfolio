@@ -3,15 +3,22 @@
 
 // Responsive
 
-//Tablet
+// Tablet — collapse two-column grid to single-column stack
 @media (max-width: $breakpoint-tablet) {
     .layout-wrapper {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
 
-        .main-content {
-            margin: 0;
-            width: 100%;
-            padding: 1rem;
-        }
+    .layout-wrapper .sidebar {
+        grid-row: auto;
+    }
+
+    footer {
+        grid-column: auto;
+    }
+
+    .layout-wrapper .main-content {
+        padding: 1rem;
+        min-width: 0;
     }
 }

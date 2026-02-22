@@ -48,13 +48,27 @@
     
     {% if page.skills %}
     <section class="sidebar-section">
-        <h2>Applied Skills</h2>
+        {% for category in page.skills %}
+        <h3 class="skill-category">{{ category[0] | capitalize }}</h3>
+        <div class="skills-list">
+            {% for skill in category[1] %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <!-- <h2>Applied Skills</h2>
         <div class="skills-list">
             {% for skill in page.skills %}
             <span class="skill-tag">{{ skill }}</span>
             {% endfor %}
-        </div>
+        </div> -->
     </section>
     {% endif %}
     
+    {% if page.title != "Home" %}
+    <button class="sidebar-btn"><i class="fas fa-chevron-down"></i>Project Skills<i class="fas fa-chevron-down"></i></button>
+    {% else %}
+    <button class="sidebar-btn">Contact & Skills<i class="fas fa-chevron-down"></i></button>
+    {% endif %}
+
 </div>

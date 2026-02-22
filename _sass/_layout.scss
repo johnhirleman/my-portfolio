@@ -1,36 +1,31 @@
 @use "sass:color";
 @use 'variables' as *;
 
-// Default layout styles (for other pages)
-// .container {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     padding: 0 20px;
-// }
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: $sidebar-width 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
 
-// Home layout with sidebar
-.home-layout {
-   
 }
 
- .layout-wrapper {
-        display: flex;
-        min-height: 100vh;
+// Sidebar spans both rows so it fills full height alongside content + footer
+.layout-wrapper .sidebar {
+    grid-row: 1 / -1;
 }
 
 .main-content {
-    margin-left: $sidebar-width;
-    width: calc(100% - #{$sidebar-width});
     padding: 3rem 4rem;
+    min-width: 0;
 }
 
-// Footer
+// Footer scoped to content column only
 footer {
-    background-color: $primary-color;
-    color: $white;
+    grid-column: 2;
+    background-color: $off-white;
+    color: color.adjust($text-color, $lightness: 25%);
     text-align: center;
     padding: 2rem;
-    margin-top: 3rem;
 }
 
 .center {
