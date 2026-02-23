@@ -65,10 +65,10 @@
     </section>
     {% endif %}
     
-    {% if page.title != "Home" %}
-    <button class="sidebar-btn"><i class="fas fa-chevron-down"></i>Project Skills<i class="fas fa-chevron-down"></i></button>
-    {% else %}
+    {% if page.title contains "Home" %}
     <button class="sidebar-btn">Contact & Skills<i class="fas fa-chevron-down"></i></button>
+    {% elsif page.skills %}
+    <button class="sidebar-btn">Project Skills<i class="fas fa-chevron-down"></i></button>
     {% endif %}
 
 </div>
