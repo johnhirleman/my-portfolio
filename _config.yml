@@ -2,8 +2,8 @@ title: John hirleman
 email: hire.johnhirleman@gmail.com
 description: >-
   A portfolio of my projects and past work experience.
-baseurl: ""
-url: "https://johnhirleman.com"
+baseurl: "/portflio"
+url: "https://johnhirleman.github.io"
 github_username:  johnhirleman
 
 # Build settings
