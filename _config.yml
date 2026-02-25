@@ -3,7 +3,7 @@ email: hire.johnhirleman@gmail.com
 description: >-
   A portfolio of my projects and past work experience.
 baseurl: "/my-portfolio"
-url: "https://johnhirleman.github.io"
+url: "https://johnhirleman.com"
 github_username:  johnhirleman
 
 # Build settings
@@ -21,6 +21,9 @@ collections:
 sass:
   sass_dir: _sass
   style: compressed
+
+include:
+  - assets
 
 #skills data
 skills:
