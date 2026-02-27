@@ -188,6 +188,10 @@
     .carousel-btn {
         display: none;
     }
+
+    .projects-scroll {
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: $breakpoint-mobile) {
