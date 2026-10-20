@@ -5,19 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', function() {
-<<<<<<< Updated upstream
-            nav.classList.toggle('nav-open');
-
-            //toggle icon
-            const icon = this.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-
-=======
             const isOpen = nav.classList.toggle('nav-open');
             this.classList.toggle('is-active', isOpen);
             this.setAttribute('aria-expanded', isOpen);
->>>>>>> Stashed changes
         });
     }
 
@@ -46,24 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarouselButtons();
     }
 
-    // sidebar collapse toggle (tablet/mobile)
-    document.addEventListener('click', function(e) {
-        const btn = e.target.closest('.sidebar-btn');
-        if (!btn) return;
+    // Sticky sidebar collapse on mobile/tablet
+    const sidebarContent = document.querySelector('.sidebar-content');
+    if (sidebarContent) {
+        let scrollListenerPaused = false;
 
-        const sidebarContent = document.querySelector('.sidebar-content');
-        if (!sidebarContent) return;
+        const handleScroll = () => {
+            if (scrollListenerPaused) return;
+            if (window.innerWidth <= 1024) {
+                if (!sidebarContent.classList.contains('sidebar-expanded')) {
+                    sidebarContent.classList.toggle('sidebar-scrolled', window.scrollY > 10);
+                }
+            } else {
+                sidebarContent.classList.remove('sidebar-scrolled');
+            }
+        };
 
-        sidebarContent.classList.toggle('sidebar-expanded');
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll, { passive: true });
 
-<<<<<<< Updated upstream
-        const icon = btn.querySelector('i');
-        if (icon) {
-            icon.classList.toggle('fa-chevron-down');
-            icon.classList.toggle('fa-chevron-up');
-        }
-    });
-=======
         // sidebar collapse toggle (tablet/mobile)
         document.addEventListener('click', function(e) {
             const btn = e.target.closest('.sidebar-btn');
@@ -89,5 +80,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
->>>>>>> Stashed changes
 });
