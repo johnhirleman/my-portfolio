@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', function() {
+<<<<<<< Updated upstream
             nav.classList.toggle('nav-open');
 
             //toggle icon
@@ -12,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
 
+=======
+            const isOpen = nav.classList.toggle('nav-open');
+            this.classList.toggle('is-active', isOpen);
+            this.setAttribute('aria-expanded', isOpen);
+>>>>>>> Stashed changes
         });
     }
 
@@ -50,10 +56,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
         sidebarContent.classList.toggle('sidebar-expanded');
 
+<<<<<<< Updated upstream
         const icon = btn.querySelector('i');
         if (icon) {
             icon.classList.toggle('fa-chevron-down');
             icon.classList.toggle('fa-chevron-up');
         }
     });
+=======
+        // sidebar collapse toggle (tablet/mobile)
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.sidebar-btn');
+            if (!btn) return;
+
+            const isExpanding = !sidebarContent.classList.contains('sidebar-expanded');
+            sidebarContent.classList.toggle('sidebar-expanded', isExpanding);
+            btn.setAttribute('aria-expanded', isExpanding);
+
+            if (isExpanding) {
+                // Expanding: remove scrolled state so quote and btn are visible
+                sidebarContent.classList.remove('sidebar-scrolled');
+            } else {
+                // Collapsing: pause scroll listener so it doesn't fire mid-animation
+                scrollListenerPaused = true;
+                sidebarContent.classList.remove('sidebar-scrolled');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // Resume after collapse animation + scroll completes
+                setTimeout(() => {
+                    scrollListenerPaused = false;
+                }, 500); // matches 0.3s transition + buffer
+            }
+        });
+    }
+>>>>>>> Stashed changes
 });

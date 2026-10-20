@@ -77,3 +77,27 @@ ul {
     margin-left: 2rem;
     margin-bottom: 1rem;
 }
+
+// Icons & Accessibility
+.icon {
+    display: inline-block;
+    vertical-align: -0.125em;
+    width: 1em;
+    height: 1em;
+    stroke-width: 2;
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+
+    &.icon-fill {
+        fill: currentColor;
+        stroke: none;
+    }
+}
+
+:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 3px;
+}

@@ -58,8 +58,25 @@
 
 .mobile-menu-toggle {
     @include mixins.parimary-btn($padding, $border-radius, $box-shadow);
-    // border: 1px solid color.adjust($primary-color, $lightness: 20%);
     display: none;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+
+    .menu-icon-close {
+        display: none;
+    }
+
+    &.is-active {
+        .menu-icon-bars {
+            display: none;
+        }
+        .menu-icon-close {
+            display: inline-block;
+        }
+    }
 }
 
 .mobile-nav {
@@ -69,7 +86,7 @@
 @media (max-width: $breakpoint-tablet) {
 
     .mobile-menu-toggle {
-        display: block;
+        display: inline-flex;
         margin-bottom: 0;
         margin-right: 0;
         margin-left: auto;
