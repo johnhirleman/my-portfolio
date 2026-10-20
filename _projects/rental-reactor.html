@@ -5,24 +5,27 @@ date: 2025-09-01
 featured: true
 in_progress: true
 
-#tech:
-#  - React
-#  - Node.js
-
-quote: "Rental Reactor is a project that allowed me to dust off my front-end development skills and build a full product from concept to design to development. Still under development but I'm excited about the potential to solve a real pain point for RV owners and learn more about building SaaS products along the way."
+quote: "Rental Reactor represents the convergence of product design and agentic engineering. By leveraging Claude Code, Antigravity, and Figma Dev integrations, I collapsed the traditional 0-to-1 delivery timeline from months to weeks—designing, architecting, and deploying a full-stack SaaS platform as a solo product and engineering operator."
 
 skills:
+  ai & agentic tools:
+    - Claude Code
+    - Google Antigravity
+    - Agentic Code Generation
+    - Prompt Architecture
+    - Context-Engineered Handoffs
   software:
-    - Figma
+    - Figma & Figma Dev Mode
+    - Adobe XD
   frameworks:
     - React
     - Node.js
     - Tailwind CSS
   applied skills:
-    - Front-End Development
-    - UX/UI Design
-    - Responsive Design
-    - Cross Team Collaboration
+    - Agentic Engineering
+    - Enterprise SaaS Architecture
+    - Design Systems Architecture
+    - Full-Stack UX
 
 images:
   thumb: assets/images/rentalreactor/rentalreactor_project.jpg
@@ -38,29 +41,49 @@ hidden: false
 <div class="content-row">
   <h2>Overview</h2>
   <div class="content-body">
-    <p>Travel trailer owners renting across multiple platforms like RVezy, RVShare, and Outdoorsy faced a fragmented, time-consuming workflow. Managing listings, tracking availability, and communicating with renters meant logging into each platform separately, manually updating calendars to avoid double bookings, and hunting for contact details that platforms deliberately kept obscured. For owners trying to grow a rental business on the side, the overhead was a barrier to scaling.</p>
-    <p>Rental Reactor was designed from the ground up to solve this. A centralized dashboard, unified messaging system, and an AI-powered agent that automatically scrapes and routes communications across platforms brought everything under one roof. This project spanned the full design process — from initial concept and wireframes through design system creation and front-end development — making it both a design challenge and a product-building experience.</p>
+    <p>Travel trailer and RV owners renting across multiple platforms—such as RVezy, RVShare, and Outdoorsy—faced a fragmented, labor-intensive workflow. Managing listings, keeping calendar availability synchronized, and responding to prospective renters required logging into three separate dashboards, manually updating dates to prevent costly double bookings, and tracking revenue across disconnected spreadsheets. Furthermore, platforms intentionally obscured renter contact info, forcing owners to maintain disjointed communication channels.</p>
+    <p>Rental Reactor was conceptualized, designed, and deployed from the ground up to solve this operational overhead. Featuring a centralized fleet dashboard, unified multi-platform calendar, consolidated messaging inbox, and an AI-powered communications engine, Rental Reactor brings multi-platform rental operations under a single pane of glass. Rather than following a conventional, drawn-out development lifecycle, Rental Reactor was delivered through <strong>agentic AI workflows</strong>—leveraging <strong>Claude Code</strong>, <strong>Google Antigravity</strong>, and <strong>Figma Dev integrations</strong> to collapse the 0-to-1 product delivery timeline from months into weeks as a solo product designer and engineering operator.</p>
   </div>
 </div>
 
 <div class="content-row">
-  <h2>Problem</h2>
+  <h2>The Problem</h2>
   <div class="content-body">
-    <p>RV and travel trailer owners renting across multiple platforms (RVezy, RVShare, Outdoorsy) struggled to manage listings, track availability, and handle communications. They had to manually log into each platform, update calendars separately (risking double bookings), track revenue in spreadsheets, and hunt for renter contact details obscured by platform policies. Communications came through different channels (email, text, in-platform messaging), making it difficult to respond quickly and maintain renter relationships.</p>
+    <p>RV owners operating independent rental fleets face distinct logistical hurdles that general hospitality tools do not address:</p>
+    <ul>
+      <li><strong>Cross-Platform Synchronization:</strong> Calendar sync delays between RVShare, Outdoorsy, and RVezy frequently result in conflicting reservations, cancellation penalties, and hurt platform search rankings.</li>
+      <li><strong>Fragmented Communication:</strong> Messages arrived via email, SMS, and siloed in-app platform inboxes with varying notification delays, making rapid response times difficult to maintain.</li>
+      <li><strong>Obscured Guest Data:</strong> Platform policies restrict early access to customer phone numbers and direct emails, impeding off-platform customer relationship building and upselling.</li>
+      <li><strong>Scattered Financial Tracking:</strong> Calculating true net margins required manual reconciliation of differing platform service fees, insurance withholdings, and cleaning deposits.</li>
+    </ul>
   </div>
 </div>
 
 <div class="content-row">
-  <h2>Process</h2>
+  <h2>Process & Agentic Engineering</h2>
   <div class="content-body">
-    <p>Started with user interviews identifying asset management and messaging as top priorities. Created user journeys for viewing, adding, editing, and archiving listings. Wireframed dashboard, listings page, and detail pages to communicate data requirements to the engineering team. Leveraged ShadCN/Tailwind design system for efficiency. Designed information architecture with "at-a-glance" listing cards and comprehensive detail pages. Created unified messaging interface with platform/type labels to consolidate communications. Iterated based on stakeholder feedback, adding features like communication labeling and AI status indicators. Handled both design and front-end development, allowing rapid experimentation.</p>
+    <p>As both the Principal Product Designer and solo builder, I established an accelerated delivery loop powered by modern AI agentic tooling:</p>
+    
+    <p><strong>Figma Design System & Token Architecture:</strong> Built a component-driven design system in Figma tailored for high-density SaaS dashboards. Established strict semantic tokens for color, typography, spacing, and component states that directly mapped to Tailwind CSS utilities.</p>
+    
+    <p><strong>Context-Engineered Handoffs via Figma Dev Integrations:</strong> Using Figma Dev integrations and structured component metadata, I bypassed ambiguous design specifications. UI components, responsive layout constraints, and interaction states were fed directly into agentic coding environments with high semantic fidelity.</p>
+
+    <p><strong>Autonomous Code Generation with Claude Code & Antigravity:</strong> I leveraged <strong>Claude Code</strong> and <strong>Google Antigravity</strong> to execute full-stack implementation. By defining modular architectural contracts, database schemas, and prompt architectures, coding agents autonomously scaffolded React components, backend scraping workers, and API routes. This eliminated the traditional friction and latency of engineering handoffs.</p>
+
+    <p><strong>Human-in-the-Loop Iteration:</strong> Maintained rigorous quality control by pairing rapid UX wireframes with agentic test harness generation. Because feature implementations were completed in hours rather than sprints, I could rapidly prototype, test edge cases with real platform payloads, and refine UX micro-interactions in real time.</p>
   </div>
 </div>
 
 <div class="content-row">
   <h2>Solution</h2>
   <div class="content-body">
-    <p>Centralized dashboard showing revenue, occupancy, pending messages, active bookings, and fleet status. Listing management with cards displaying images, title, specs, ratings, current status (with guest/available/maintenance), and listing platform labels. Master calendar with color-coded view of all bookings and blackout dates across trailers. Unified messaging inbox with platform labels, listing context, and unread indicators. AI agent with approval-based reply system including thumbs up/edit feedback loop for training. Listing detail pages with rental history, financials, analytics, and credential management for third-party platforms. Status indicators (green/yellow/red) for AI scraping health. Global sidebar navigation throughout experience.</p>
+    <p>Rental Reactor delivers an end-to-end command center for multi-platform RV rental operators:</p>
+    <ul>
+      <li><strong>Fleet Command Dashboard:</strong> High-level real-time visibility into active bookings, monthly occupancy rates, projected revenue, pending guest inquiries, and fleet maintenance status.</li>
+      <li><strong>Unified Master Calendar:</strong> Color-coded aggregate calendar displaying real-time reservations, platform origins, turnaround buffers, and maintenance blackout windows across all RV units.</li>
+      <li><strong>Consolidated Messaging & AI Co-Pilot:</strong> A single inbox uniting guest inquiries across RVezy, RVShare, and Outdoorsy with booking context badges. Includes an approval-based AI draft response engine with a quick-edit feedback loop to ensure replies match the owner's voice before dispatch.</li>
+      <li><strong>Fleet Listing Management:</strong> Granular unit profiles detailing equipment specifications, platform-specific pricing rules, platform credential vaults, and automated scraper telemetry indicators (green/yellow/red) to monitor third-party sync health.</li>
+    </ul>
 
     <img class="project-image" src="{{ page.images.project[0].src | relative_url }}" alt="{{ page.images.project[0].alt }}">
     <p class="image-caption">{{ page.images.project[0].caption }}</p>
@@ -68,15 +91,20 @@ hidden: false
 </div>
 
 <div class="content-row">
-  <h2>Outcome</h2>
+  <h2>Outcome & Impact</h2>
   <div class="content-body">
-    <p>Currently in development with beta launch planned for early 2026. Positive preliminary feedback from research participants validating design assumptions. Personal learning around designing feedback loops for AI systems, representing AI-generated content clearly in UI, and benefits of designer-developer hybrid role for rapid iteration. Future plans include beta testing with a small user group recruited through research participants, gathering usage metrics to inform pricing models for paid SaaS, and potential wider rollout based on feedback.</p>
+    <p>By pairing deep product design principles with agentic software execution, Rental Reactor achieved milestones typical of a full product team:</p>
+    <ul>
+      <li><strong>Drastic Velocity Acceleration:</strong> Collapsed the 0-to-1 development timeline from an estimated 4–6 months down to weeks, enabling rapid validation of core SaaS assumptions.</li>
+      <li><strong>Clean System Maintainability:</strong> Established reusable prompt architectures and component patterns that allow the codebase to scale cleanly without architectural debt.</li>
+      <li><strong>Targeted Beta Rollout:</strong> Beta deployment scheduled for early 2026 with a dedicated cohort of multi-unit RV fleet owners recruited through initial user research interviews.</li>
+    </ul>
   </div>
 </div>
 
 <div class="content-row">
-  <h2>Personal Learning</h2>
+  <h2>Personal Learning & Insights</h2>
   <div class="content-body">
-    <p>This project allowed me to dive back into front-end development in a rich Node.js and React environment, reinforcing my skills in component-based architecture and state management. I also deepened my understanding of Tailwind CSS and how to effectively architect responsive UIs with consistent design systems.</p>
+    <p>Rental Reactor solidified my perspective on the future of software delivery: the most effective product builders of tomorrow will be <strong>Design Technologists who leverage Agentic AI</strong> to turn strategy into shippable production code directly. Designing with Claude Code and Antigravity demonstrated how prompt architecture and context engineering serve as the new connective tissue between design tokens and frontend implementation, allowing a solo operator to execute at the speed of thought without sacrificing user-centered design standards.</p>
   </div>
 </div>

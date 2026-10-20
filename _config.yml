@@ -29,6 +29,13 @@ include:
 
 #skills data
 skills:
+  ai & agentic tools:
+    - Claude Code
+    - Google Antigravity
+    - Figma Dev Integrations
+    - Agentic Code Generation
+    - Prompt Architecture
+    - Context-Engineered Handoffs
   languages:
     - HTML
     - CSS

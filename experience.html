@@ -4,58 +4,93 @@ title: Experience
 ---
 
 <article>
-    <h1>Experience</h1>
-    
-    <h2>Work Experience</h2>
-    
-    <div class="experience-item">
-        <div class="job-title">Senior Developer</div>
-        <div class="company">Company Name</div>
-        <div class="duration">January 2022 - Present</div>
-        <p>Describe your responsibilities and key achievements in this role.</p>
-        <ul>
-            <li>Key achievement or responsibility #1</li>
-            <li>Key achievement or responsibility #2</li>
-            <li>Key achievement or responsibility #3</li>
-        </ul>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <h1 style="margin-bottom: 0;">Experience</h1>
+        <a href="{{ '/assets/pdf/John_Hirleman_Resume.pdf' | relative_url }}" class="resume-button" target="_blank" rel="noopener noreferrer">
+            {% include icon.html name="file-text" %} View Resume (PDF)
+        </a>
     </div>
     
-    <div class="experience-item">
-        <div class="job-title">Developer</div>
-        <div class="company">Previous Company</div>
-        <div class="duration">June 2020 - December 2021</div>
-        <p>Describe your responsibilities and key achievements in this role.</p>
-        <ul>
-            <li>Key achievement or responsibility #1</li>
-            <li>Key achievement or responsibility #2</li>
-            <li>Key achievement or responsibility #3</li>
-        </ul>
+    <h2>Professional Experience</h2>
+    
+    <div class="experience-card">
+        <h3>Principal UX/UI Product Designer & Founder</h3>
+        <div class="experience-meta">
+            <span class="date-range">Sep 2025 – Present</span>
+            <span class="employer">MicStand.io & Rental Reactor</span>
+            <span class="location">{% include icon.html name="map-pin" %} Remote</span>
+        </div>
+        <p><strong>End-to-End Product Leadership:</strong> Owned product vision, UX architecture, visual branding, and system specifications for live event SaaS (MicStand.io) and multi-platform RV rental management (Rental Reactor).</p>
+        <p><strong>Agentic AI Acceleration:</strong> Leveraged agentic engineering workflows (Claude Code, Google Antigravity, LLM coding agents) and Figma Dev integrations to build and deploy production applications as a solo product and engineering operator, establishing prompt architectures for clean system maintainability.</p>
+        <p><strong>Design Systems & Revenue:</strong> Architected component-driven design systems and responsive interfaces; integrated automated Stripe billing workflows and custom analytics dashboards to maximize retention.</p>
     </div>
     
-    <div class="experience-item">
-        <div class="job-title">Junior Developer</div>
-        <div class="company">First Company</div>
-        <div class="duration">January 2018 - May 2020</div>
-        <p>Describe your responsibilities and key achievements in this role.</p>
-        <ul>
-            <li>Key achievement or responsibility #1</li>
-            <li>Key achievement or responsibility #2</li>
-        </ul>
+    <div class="experience-card">
+        <h3>Frontend UX/UI Developer & Principal Product Designer</h3>
+        <div class="experience-meta">
+            <span class="date-range">Apr 2019 – Jun 2025</span>
+            <span class="employer">Work Truck Solutions (Comvoy.com)</span>
+            <span class="location">{% include icon.html name="map-pin" %} Chico, CA (Remote)</span>
+        </div>
+        <p><strong>Design Ecosystem Ownership:</strong> Served as sole designer managing multi-platform B2B ecosystem serving thousands of commercial vehicle dealers, including internal admin portals, dealership CRM, and national marketplace Comvoy.com.</p>
+        <p><strong>Design System Architecture:</strong> Architected complete design systems for Admin Portals (Svelte/SvelteKit) and CRM platforms, unifying UI tokens across typography, color, and layouts to eliminate engineering handoff friction.</p>
+        <p><strong>Mobile CRM Redesign:</strong> Led comprehensive overhaul of mobile CRM platform, driving measurable post-launch surges in mobile user engagement and field sales rep productivity.</p>
+        <p><strong>Browser Extension UX & Frontend:</strong> Built browser extension interfaces allowing sales reps to access real-time commercial vehicle inventory across browser tabs. Authored production markup, CSS/SASS, and JavaScript within Git workflows; multiple-time recipient of "The Truck" award for outstanding company impact.</p>
     </div>
     
-    <h2>Skills</h2>
-    <ul>
-        <li>Programming Languages: Python, JavaScript, Java</li>
-        <li>Frameworks: React, Node.js, Django</li>
-        <li>Tools: Git, Docker, AWS</li>
-        <li>Soft Skills: Team Leadership, Problem Solving, Communication</li>
-    </ul>
+    <div class="experience-card">
+        <h3>UX/UI Developer & Designer</h3>
+        <div class="experience-meta">
+            <span class="date-range">Mar 2016 – Apr 2019</span>
+            <span class="employer">NeedDirect (The Distribution Point)</span>
+            <span class="location">{% include icon.html name="map-pin" %} Chico, CA</span>
+        </div>
+        <p><strong>E-Commerce Optimization:</strong> Owned end-to-end product design and frontend execution for high-volume plumbing fixture marketplace ($50k+/mo revenue); migrated storefront to Shopify using custom Liquid templates, semantic HTML, and responsive CSS.</p>
+        <p><strong>Conversion Uplift:</strong> Redesigned complex product detail pages (PDP) to handle multi-tiered bulk ordering and lead-time calculations, driving directly measurable increases in checkout conversion.</p>
+        <p><strong>Engineering Roadmaps:</strong> Translated user analytics and wireframes into technical roadmaps and frontend markup for agile developer execution.</p>
+    </div>
     
-    <h2>Education</h2>
-    <div class="experience-item">
-        <div class="job-title">Bachelor of Science in Computer Science</div>
-        <div class="company">University Name</div>
-        <div class="duration">Graduated 2018</div>
-        <p>Relevant coursework, honors, or achievements during your studies.</p>
+    <div class="experience-card">
+        <h3>Product UX/UI Engineer</h3>
+        <div class="experience-meta">
+            <span class="date-range">May 2015 – Jan 2016</span>
+            <span class="employer">DesignByHumans</span>
+            <span class="location">{% include icon.html name="map-pin" %} Chico, CA</span>
+        </div>
+        <p><strong>Funnel Optimization:</strong> Spearheaded user flow optimization and storefront themes for a global apparel marketplace; conducted Google Analytics A/B tests to eliminate drop-off points in the buyer funnel.</p>
+        <p><strong>Prototyping & Specs:</strong> Created interactive prototypes and production-ready HTML/SASS/JS code bridging design concepts with engineering delivery.</p>
+    </div>
+
+    <div class="experience-card">
+        <h3>UX Engineer & Interaction Designer (Progressive Roles)</h3>
+        <div class="experience-meta">
+            <span class="date-range">Mar 2012 – May 2015</span>
+            <span class="employer">Build.com (Ferguson Enterprises)</span>
+            <span class="location">{% include icon.html name="map-pin" %} Chico, CA</span>
+        </div>
+        <p><strong>Mobile Web (2014–2015):</strong> Established mobile-first UX standards and modular JavaScript components deployed across 12 distinct retail marketplaces; enforced web security standards (XSS mitigation).</p>
+        <p><strong>Internal Search (Solr) (2013–2014):</strong> Designed customer-facing search interfaces and internal "Search-in-dizing" administrative tools to manipulate Solr algorithms and improve discoverability.</p>
+        <p><strong>Conversion & Thought Leadership:</strong> Redesigned 12+ critical user interaction flows; authored featured article "7 Website Search Hacks to Ace E-Commerce Conversions" in Search Engine Journal; received Build.com Employee Honors and Q4 2013 Quarterly Award.</p>
+    </div>
+
+    <h2>Education & Honors</h2>
+    <div class="experience-card">
+        <h3>BFA in Web Design & New Media</h3>
+        <div class="experience-meta">
+            <span class="date-range">2009 – 2013</span>
+            <span class="school">Academy of Art University</span>
+            <span class="location">{% include icon.html name="map-pin" %} San Francisco, CA</span>
+        </div>
+        <p>Studied web design and new media. Comprehensive curriculum in UI/UX design, visual communication, typography, interaction design, and modern front-end technologies.</p>
+    </div>
+
+    <div class="experience-card">
+        <h3>Multimedia Studies Program</h3>
+        <div class="experience-meta">
+            <span class="date-range">2004 – 2007</span>
+            <span class="school">Butte College</span>
+            <span class="location">{% include icon.html name="map-pin" %} Oroville, CA</span>
+        </div>
+        <p>Activities: STAND (Student Training And New Design). Digital graphic design, web design, photography, and illustration.</p>
     </div>
 </article>
