@@ -112,8 +112,10 @@
         margin: 0 auto;
         display: none;
 
+        .icon,
         i {
             margin-left: .5rem;
+            transition: transform 0.3s ease;
         }
     }
 
@@ -148,8 +150,16 @@
     list-style: none;
     
     li {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
         margin-bottom: 0.75rem;
         font-size: 0.95rem;
+
+        .icon {
+            color: $accent-color;
+            font-size: 1rem;
+        }
     }
     
     a {
@@ -280,8 +290,14 @@
             }
         }
 
+        .sidebar-btn .icon,
         .sidebar-btn i {
             transition: transform 0.5s ease;
+        }
+
+        &.sidebar-expanded .sidebar-btn .icon,
+        &.sidebar-expanded .sidebar-btn i {
+            transform: rotate(180deg);
         }
     }
 

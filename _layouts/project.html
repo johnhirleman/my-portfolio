@@ -26,7 +26,7 @@ layout: default
         </div>
 
         {% if page.images %}
-        <img src="{{ page.images.hero | relative_url }}" alt="{{ page.title }}" class="project-hero-image">
+        <img src="{{ page.images.hero | relative_url }}" alt="{{ page.title }}" class="project-hero-image" loading="eager" decoding="async">
         {% endif %}
 
     </header>
@@ -36,6 +36,6 @@ layout: default
     </div>
     
     <div class="project-footer">
-        <a href="{{ '/projects.html' | relative_url }}" class="back-link"><i class="fas fa-arrow-circle-left"></i>Back to Projects</a>
+        <a href="{{ '/projects.html' | relative_url }}" class="back-link">{% include icon.html name="arrow-left" %}Back to Projects</a>
     </div>
 </article>

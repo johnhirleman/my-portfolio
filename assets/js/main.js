@@ -5,12 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('nav-open');
-
-            //toggle icon
-            const icon = this.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
+            const isOpen = nav.classList.toggle('nav-open');
+            this.classList.toggle('is-active', isOpen);
+            this.setAttribute('aria-expanded', isOpen);
         });
     }
 
@@ -64,13 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!btn) return;
 
             const isExpanding = !sidebarContent.classList.contains('sidebar-expanded');
-            sidebarContent.classList.toggle('sidebar-expanded');
-
-            const icon = btn.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            }
+            sidebarContent.classList.toggle('sidebar-expanded', isExpanding);
+            btn.setAttribute('aria-expanded', isExpanding);
 
             if (isExpanding) {
                 // Expanding: remove scrolled state so quote and btn are visible
